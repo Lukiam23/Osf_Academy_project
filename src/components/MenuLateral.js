@@ -16,7 +16,7 @@ function MenuLateral() {
 					<span>Filtrar por tipo</span>
 				</a>
 
-				<div className={styles.checkbox}>
+				<div id="type" className={styles.checkbox}>
 					<CheckBox tipo='Planta' />
 					<CheckBox tipo='Fogo' />
 					<CheckBox tipo='Água' />
@@ -39,7 +39,7 @@ function MenuLateral() {
 					<span>Filtrar por preço</span>
 				</a>
 
-				<div className={styles.checkbox}>
+				<div id="price" className={styles.checkbox}>
 					<CheckBox tipo=' R$ 1000 - R$ 2000' />
 					<CheckBox tipo=' R$ 2000 - R$ 4000' />
 					<CheckBox tipo=' R$ 4000 - R$ 5000' />

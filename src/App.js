@@ -3,7 +3,7 @@ import './App.css';
 import { Helmet } from 'react-helmet';
 import Header from './components/Header'
 import MenuLateral from './components/MenuLateral'
-
+import styles from './components/MenuLateral.module.css'
 
 function App() {
   return (
