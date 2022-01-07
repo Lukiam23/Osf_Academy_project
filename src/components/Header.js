@@ -5,7 +5,7 @@ function Header({img,alt}) {
 		<div className={styles.headerContainer}>
 			<h1>Rocket<span>Market</span></h1>
 			<div className={styles.searchBox}>
-				<input type="text" placeholder="Insira um pokemon" className={styles.headerSearchInput}/>
+				<input type="text" placeholder="Insira um pokémon" className={styles.headerSearchInput}/>
 				<a className={styles.searchButton} href="#">
 					<i class="fas fa-search"></i>
 				</a>

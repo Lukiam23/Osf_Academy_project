@@ -16,8 +16,6 @@
 	width: 300px;
 	display: flex;
 	height: 70px;
-
-
 }
 
 .searchBox:hover > .headerSearchInput{
