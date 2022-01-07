@@ -1,11 +1,8 @@
 .menuContainer{
 	width: 60px;
-	height: 70px;
 	display: block;
-	background: none;
+	background: black;
 }
-
-
 
 .menuButton{
 	margin: 20px;
@@ -13,26 +10,22 @@
 
 .menuButton span{
 	font-size: 35px;
-	color:  red;
+	color:  #ff1100;
 	background: none;
 }
 
 .menuContainer:hover > .selectAble{
-	width: 200px;
-	height: 350px;
 	display: block;
 }
 
-.menuContainer:hover{
-	height: 350px;
-}
-
 .selectAble{
-	border: solid black 1px;
+	position: absolute;
+	top: 70px;
+	border: none;
 	display: none;
-	background: white;
+	background: rgba(44, 62, 80,.7);
 	padding: 20px;
-	margin-left: 10px;
-	transition: 0.4s;
-	height: 100px;
+	margin-left: 0;
+	height: 200%;
+	width: 200px;
 }

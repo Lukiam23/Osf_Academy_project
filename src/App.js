@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Helmet>
         <script src="https://kit.fontawesome.com/3475a922f1.js" crossorigin="anonymous"></script>
+        <title>RocketMarket</title>
       </Helmet>
       
       <Header img='images/pokeball.png' alt='pokeball'/>

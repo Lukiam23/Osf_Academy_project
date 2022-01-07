@@ -5,6 +5,7 @@
 	background-color: #010101;
 	display: flex;
 	position: fixed;
+	height: 70px;
 	max-height: 70px;
 	z-index: 1;
 	
@@ -71,12 +72,3 @@
 
 }
 
-.menuButton{
-	margin: 20px;
-}
-
-.menuButton span{
-	font-size: 35px;
-	color:  red;
-	background: none;
-}
