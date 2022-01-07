@@ -10,22 +10,35 @@ function MenuLateral() {
 			</div>
 
 			<nav className={styles.selectAble}>
-				<Tipo tipo='Planta' />
-				<Tipo tipo='Fogo' />
-				<Tipo tipo='Água' />
-				<Tipo tipo='Inseto' />
-				<Tipo tipo='Normal' />
-				<Tipo tipo='Venenoso' />
-				<Tipo tipo='Elétrico' />
-				<Tipo tipo='Terra' />
-				<Tipo tipo='Pedra' />
-				<Tipo tipo='Voador' />
-				<Tipo tipo='Fantasma' />
-				<Tipo tipo='Gelo' />
-				<Tipo tipo='Dragão' />
-				<Tipo tipo='Metálico' />
-				<Tipo tipo='Sombrio' />
-				<Tipo tipo='Fada' />
+				<header>Menu</header>
+
+				<a href="#">
+					<span>Filtrar por tipo</span>
+				</a>
+
+				<div className={styles.selectType}>
+					<Tipo tipo='Planta' />
+					<Tipo tipo='Fogo' />
+					<Tipo tipo='Água' />
+					<Tipo tipo='Inseto' />
+					<Tipo tipo='Normal' />
+					<Tipo tipo='Venenoso' />
+					<Tipo tipo='Elétrico' />
+					<Tipo tipo='Terra' />
+					<Tipo tipo='Pedra' />
+					<Tipo tipo='Voador' />
+					<Tipo tipo='Fantasma' />
+					<Tipo tipo='Gelo' />
+					<Tipo tipo='Dragão' />
+					<Tipo tipo='Metálico' />
+					<Tipo tipo='Sombrio' />
+					<Tipo tipo='Fada' />		
+				</div>
+
+				<a href="#">
+					<span>Filtrar por Preço</span>
+				</a>
+
 			</nav>
 		</div>
 		
