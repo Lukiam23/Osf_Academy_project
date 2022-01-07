@@ -1,4 +1,4 @@
-function Tipo({tipo}) {
+function CheckBox({tipo}) {
 	return (
 		<div>	
 			<input type="checkbox" value={tipo} />
@@ -8,4 +8,4 @@ function Tipo({tipo}) {
 	
 }
 
-export default Tipo
+export default CheckBox
