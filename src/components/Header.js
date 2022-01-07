@@ -2,16 +2,16 @@ import styles from './Header.module.css'
 
 function Header({img,alt}) {
 	return (
-		<div className={styles.headerContainer}>
+		<header className={styles.headerContainer}>
 			<h1>Rocket<span>Market</span></h1>
 			<div className={styles.searchBox}>
-				<input type="text" placeholder="Insira um pokémon" className={styles.headerSearchInput}/>
+				<input type="text" placeholder="Insira um pokémo" className={styles.headerSearchInput}/>
 				<a className={styles.searchButton} href="#">
 					<i class="fas fa-search"></i>
 				</a>
 			</div>
 			
-		</div>
+		</header>
 	);
 }
 
