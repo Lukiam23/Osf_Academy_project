@@ -2,6 +2,7 @@ import './App.css';
 //import Card from './components/Card'
 import { Helmet } from 'react-helmet';
 import Header from './components/Header'
+import MenuLateral from './components/MenuLateral'
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <title>RocketMarket</title>
       </Helmet>
       
+      <MenuLateral />
       <Header img='images/pokeball.png' alt='pokeball'/>
       
     </div>
