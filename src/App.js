@@ -3,6 +3,7 @@ import './App.css';
 import { Helmet } from 'react-helmet';
 import Header from './components/Header'
 
+
 function App() {
   return (
     <div className="App">
@@ -11,6 +12,7 @@ function App() {
       </Helmet>
       
       <Header img='images/pokeball.png' alt='pokeball'/>
+      
     </div>
   );
 }

@@ -6,6 +6,7 @@
 	display: flex;
 	position: fixed;
 	max-height: 70px;
+	z-index: 1;
 	
 }
 
@@ -20,7 +21,7 @@
 
 .searchBox:hover > .headerSearchInput{
 	width: 200px;
-	border-radius: 50px 50px;
+	border-radius: 50px;
 	outline: white solid 1px;
 }
 
@@ -47,7 +48,7 @@
 }
 
 .headerContainer h1{
-	margin-left: 10px;
+	margin-left: 50px;
 	color: #ff1100;
 }
 
@@ -68,4 +69,14 @@
 	align-items: center;
 	text-decoration: none
 
+}
+
+.menuButton{
+	margin: 20px;
+}
+
+.menuButton span{
+	font-size: 35px;
+	color:  red;
+	background: none;
 }
