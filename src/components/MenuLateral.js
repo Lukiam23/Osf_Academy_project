@@ -29,56 +29,57 @@ function MenuLateral() {
 				<span><i class="fas fa-bars"></i></span>
 			</div>
 
-			<nav className={styles.selectAble}>
+			<div className={styles.selectAble}>
 				<header>Menu</header>
+				<nav>
+					<a href="#" onClick={showTypes}>
+						<span>Tipo</span>
+					</a>
 
-				<a href="#" onClick={showTypes}>
-					<span>Filtrar por tipo</span>
-				</a>
+					<div id="type" className={styles.checkbox}>
+						<CheckBox tipo='Planta' />
+						<CheckBox tipo='Fogo' />
+						<CheckBox tipo='Água' />
+						<CheckBox tipo='Inseto' />
+						<CheckBox tipo='Normal' />
+						<CheckBox tipo='Venenoso' />
+						<CheckBox tipo='Elétrico' />
+						<CheckBox tipo='Terra' />
+						<CheckBox tipo='Pedra' />
+						<CheckBox tipo='Voador' />
+						<CheckBox tipo='Fantasma' />
+						<CheckBox tipo='Gelo' />
+						<CheckBox tipo='Dragão' />
+						<CheckBox tipo='Metálico' />
+						<CheckBox tipo='Sombrio' />
+						<CheckBox tipo='Fada' />		
+					</div>
 
-				<div id="type" className={styles.checkbox}>
-					<CheckBox tipo='Planta' />
-					<CheckBox tipo='Fogo' />
-					<CheckBox tipo='Água' />
-					<CheckBox tipo='Inseto' />
-					<CheckBox tipo='Normal' />
-					<CheckBox tipo='Venenoso' />
-					<CheckBox tipo='Elétrico' />
-					<CheckBox tipo='Terra' />
-					<CheckBox tipo='Pedra' />
-					<CheckBox tipo='Voador' />
-					<CheckBox tipo='Fantasma' />
-					<CheckBox tipo='Gelo' />
-					<CheckBox tipo='Dragão' />
-					<CheckBox tipo='Metálico' />
-					<CheckBox tipo='Sombrio' />
-					<CheckBox tipo='Fada' />		
-				</div>
+					<a href="#" onClick={showPrices}>
+						<span>Preço</span>
+					</a>
 
-				<a href="#" onClick={showPrices}>
-					<span>Filtrar por preço</span>
-				</a>
+					<div id="price" className={styles.checkbox}>
+						<CheckBox tipo=' R$ 1000 - R$ 2000' />
+						<CheckBox tipo=' R$ 2000 - R$ 4000' />
+						<CheckBox tipo=' R$ 4000 - R$ 5000' />
+						<CheckBox tipo=' R$ 6000 - R$ 7000' />
+						<CheckBox tipo=' R$ 8000 - R$ 9000' />
+						<CheckBox tipo=' R$ 10.000 - R$ 11.000' />
+						<CheckBox tipo=' R$ 12.000 - R$ 13.000' />
+						<CheckBox tipo=' R$ 13.000 - R$ 14.000' />
+						<CheckBox tipo=' R$ 14.000 - R$ 15.000' />
+						<CheckBox tipo=' R$ 15.000 - R$ 16.000' />
+						<CheckBox tipo=' R$ 16.000 - R$ 17.000' />
+						<CheckBox tipo=' R$ 17.000 - R$ 18.000' />
+						<CheckBox tipo=' R$ 18.000 - R$ 19.000' />
+						<CheckBox tipo=' R$ 19.000 - R$ 20.000' />
+						<CheckBox tipo=' R$ 20.000 - R$ 21.000' />
+						
+					</div>
 
-				<div id="price" className={styles.checkbox}>
-					<CheckBox tipo=' R$ 1000 - R$ 2000' />
-					<CheckBox tipo=' R$ 2000 - R$ 4000' />
-					<CheckBox tipo=' R$ 4000 - R$ 5000' />
-					<CheckBox tipo=' R$ 6000 - R$ 7000' />
-					<CheckBox tipo=' R$ 8000 - R$ 9000' />
-					<CheckBox tipo=' R$ 10.000 - R$ 11.000' />
-					<CheckBox tipo=' R$ 12.000 - R$ 13.000' />
-					<CheckBox tipo=' R$ 13.000 - R$ 14.000' />
-					<CheckBox tipo=' R$ 14.000 - R$ 15.000' />
-					<CheckBox tipo=' R$ 15.000 - R$ 16.000' />
-					<CheckBox tipo=' R$ 16.000 - R$ 17.000' />
-					<CheckBox tipo=' R$ 17.000 - R$ 18.000' />
-					<CheckBox tipo=' R$ 18.000 - R$ 19.000' />
-					<CheckBox tipo=' R$ 19.000 - R$ 20.000' />
-					<CheckBox tipo=' R$ 20.000 - R$ 21.000' />
-					
-				</div>
-
-			</nav>
+				</nav>
+			</div>
 		</div>
 		
 	);
