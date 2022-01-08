@@ -1,5 +1,5 @@
 import './App.css';
-//import Card from './components/Card'
+import Card from './components/Card'
 import { Helmet } from 'react-helmet';
 import Header from './components/Header'
 import MenuLateral from './components/MenuLateral'
@@ -15,6 +15,8 @@ function App() {
       
       <MenuLateral />
       <Header img='images/pokeball.png' alt='pokeball'/>
+
+      <Card nome='Pikachu' tipo='Elétrico' preco='R$ 10.000' qt='1' img='images/pikachu.png' alt='Pikachu'/>
       
     </div>
   );

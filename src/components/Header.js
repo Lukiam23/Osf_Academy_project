@@ -2,7 +2,7 @@ import styles from './Header.module.css'
 
 function Header({img,alt}) {
 	return (
-		<header className={styles.headerContainer}>
+		<div className={styles.headerContainer}>
 			<h1>Rocket<span>Market</span></h1>
 			<div className={styles.searchBox}>
 				<input type="text" placeholder="Insira um pokémon" className={styles.headerSearchInput}/>
@@ -11,7 +11,7 @@ function Header({img,alt}) {
 				</a>
 			</div>
 			
-		</header>
+		</div>
 	);
 }
 

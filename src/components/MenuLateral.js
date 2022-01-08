@@ -3,6 +3,26 @@ import CheckBox from './CheckBox'
 
 
 function MenuLateral() {
+	function showTypes() {
+		let element = document.getElementById('type');
+		if(element.style.display === "block"){
+			element.style.display = "none";
+		} else{
+			element.style.display = "block";
+		}
+		
+	}
+
+	function showPrices() {
+		let element = document.getElementById('price');
+		if(element.style.display === "block"){
+			element.style.display = "none";
+		} else{
+			element.style.display = "block";
+		}
+		
+	}
+
 	return (
 		<div className={styles.menuContainer}>
 			<div className={styles.menuButton}>
@@ -12,7 +32,7 @@ function MenuLateral() {
 			<nav className={styles.selectAble}>
 				<header>Menu</header>
 
-				<a href="#">
+				<a href="#" onClick={showTypes}>
 					<span>Filtrar por tipo</span>
 				</a>
 
@@ -35,7 +55,7 @@ function MenuLateral() {
 					<CheckBox tipo='Fada' />		
 				</div>
 
-				<a href="#">
+				<a href="#" onClick={showPrices}>
 					<span>Filtrar por preço</span>
 				</a>
 

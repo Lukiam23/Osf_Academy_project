@@ -1,8 +1,10 @@
 function CheckBox({tipo}) {
 	return (
 		<div>	
-			<input type="checkbox" value={tipo} />
-			<label>{tipo}</label>
+			<label>
+				<input type="checkbox" value={tipo} />
+				{tipo}
+			</label>
 		</div>
 	);
 	

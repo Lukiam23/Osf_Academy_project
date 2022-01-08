@@ -17,12 +17,12 @@
 
 .menuButton span{
 	font-size: 35px;
-	color:  #ff1100;
+	color:  #ecf0f1;
 	background: none;
 }
 
 .menuContainer:hover > .selectAble{
-	display: block;
+	left: 0;
 }
 
 .menuContainer:hover{
@@ -33,8 +33,9 @@
 	position: absolute;
 	box-sizing: border-box;
 	top: 70px;
+	left: -900px;
+	display: block;
 	border: none;
-	display: none;
 	background: #1e1e1e;
 	
 	margin: 0;
@@ -42,7 +43,7 @@
 	width: 200px;
 	min-height: 50px;
 	overflow-y: scroll;
-	transition: all .5s ease;
+	transition: all .8s;
 }
 
 .selectAble header{
@@ -66,7 +67,6 @@
 	border-bottom: 1px solid black;
 	border-top: 1px solid rgba(255, 255, 255, .1);
 	font-family: 'Open Sans', sans-serif;
-	transition: all .5s ease;
 	text-align: center;
 
 }
@@ -83,8 +83,7 @@ a:active, a:hover{
 	border-bottom: 1px solid black;
 	border-top: 1px solid rgba(255, 255, 255, .1);
 	text-align: left;
-	display: block;
-	transition: all .5s ease;
+	display: none;
 	font-size: 18px;
 
 }
