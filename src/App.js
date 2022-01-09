@@ -20,6 +20,37 @@ function App() {
         <Card nome='Articuno' tipo='Gelo Voador' preco='R$ 21.000' img='images/p3.png' alt='Articuno'/>
         <Card nome='Clefairy' tipo='Fada' preco='R$ 2.000' img='images/p1.png' alt='Clefairy'/>
 
+        <Card nome='Pikachu' tipo='Elétrico' preco='R$ 10.000' img='images/p2.png' alt='Pikachu'/>
+        <Card nome='Articuno' tipo='Gelo Voador' preco='R$ 21.000' img='images/p3.png' alt='Articuno'/>
+        <Card nome='Clefairy' tipo='Fada' preco='R$ 2.000' img='images/p1.png' alt='Clefairy'/>
+        <Card nome='Pikachu' tipo='Elétrico' preco='R$ 10.000' img='images/p2.png' alt='Pikachu'/>
+        <Card nome='Articuno' tipo='Gelo Voador' preco='R$ 21.000' img='images/p3.png' alt='Articuno'/>
+        <Card nome='Clefairy' tipo='Fada' preco='R$ 2.000' img='images/p1.png' alt='Clefairy'/>
+
+        <Card nome='Pikachu' tipo='Elétrico' preco='R$ 10.000' img='images/p2.png' alt='Pikachu'/>
+        <Card nome='Articuno' tipo='Gelo Voador' preco='R$ 21.000' img='images/p3.png' alt='Articuno'/>
+        <Card nome='Clefairy' tipo='Fada' preco='R$ 2.000' img='images/p1.png' alt='Clefairy'/>
+
+        <Card nome='Pikachu' tipo='Elétrico' preco='R$ 10.000' img='images/p2.png' alt='Pikachu'/>
+        <Card nome='Articuno' tipo='Gelo Voador' preco='R$ 21.000' img='images/p3.png' alt='Articuno'/>
+        <Card nome='Clefairy' tipo='Fada' preco='R$ 2.000' img='images/p1.png' alt='Clefairy'/>
+
+        <Card nome='Pikachu' tipo='Elétrico' preco='R$ 10.000' img='images/p2.png' alt='Pikachu'/>
+        <Card nome='Articuno' tipo='Gelo Voador' preco='R$ 21.000' img='images/p3.png' alt='Articuno'/>
+        <Card nome='Clefairy' tipo='Fada' preco='R$ 2.000' img='images/p1.png' alt='Clefairy'/>
+
+        <Card nome='Pikachu' tipo='Elétrico' preco='R$ 10.000' img='images/p2.png' alt='Pikachu'/>
+        <Card nome='Articuno' tipo='Gelo Voador' preco='R$ 21.000' img='images/p3.png' alt='Articuno'/>
+        <Card nome='Clefairy' tipo='Fada' preco='R$ 2.000' img='images/p1.png' alt='Clefairy'/>
+
+        <Card nome='Pikachu' tipo='Elétrico' preco='R$ 10.000' img='images/p2.png' alt='Pikachu'/>
+        <Card nome='Articuno' tipo='Gelo Voador' preco='R$ 21.000' img='images/p3.png' alt='Articuno'/>
+        <Card nome='Clefairy' tipo='Fada' preco='R$ 2.000' img='images/p1.png' alt='Clefairy'/>
+
+        <Card nome='Pikachu' tipo='Elétrico' preco='R$ 10.000' img='images/p2.png' alt='Pikachu'/>
+        <Card nome='Articuno' tipo='Gelo Voador' preco='R$ 21.000' img='images/p3.png' alt='Articuno'/>
+        <Card nome='Clefairy' tipo='Fada' preco='R$ 2.000' img='images/p1.png' alt='Clefairy'/>
+
       </div>
 
     </div>
