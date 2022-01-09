@@ -1,14 +1,18 @@
-import styles from './Card.module.css'
-function Card({nome, tipo, preco, qt, img, alt}) {
+import styles from '../css/Card.module.css'
+function Card({nome, tipo, preco, img, alt}) {
 	return (
-		<div className={styles.cardContainers}>
-			<img src={img} alt={alt} />
-			<h5>{nome}</h5>
-			<h5>{preco}</h5>
-			<h5>Tipo:{tipo}</h5>
-			
-			<h5>Quantidade em estoque:{qt}</h5>
-		</div>
+			<div className={styles.cardContainers}>
+				<img src={img} alt={alt} />
+
+				<div className={styles.nomePreco}>
+					<label>{nome}</label>
+					<label>{preco}</label>
+				</div>
+
+				<div className={styles.descricao}>
+					<label>O {nome} é um pokémon do tipo {tipo}</label>
+				</div>			
+			</div>
 	);
 }
 

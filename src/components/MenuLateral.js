@@ -1,4 +1,4 @@
-import styles from './MenuLateral.module.css'
+import styles from '../css/MenuLateral.module.css'
 import CheckBox from './CheckBox'
 
 

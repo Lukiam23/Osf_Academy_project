@@ -68,13 +68,13 @@
 
 }
 
-a:hover{
-	border-left: 5px solid #aa1100;
-	color: #ff1100;
+.selectAble a:hover{
+	border-left: 5px solid #1598db;
+	color: #3498db;
 }
 
 .checkbox{
-	
+
 	width: 100%;
 	background: white;
 	box-sizing: border-box;

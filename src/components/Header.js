@@ -1,4 +1,4 @@
-import styles from './Header.module.css'
+import styles from '../css/Header.module.css'
 
 function Header({img,alt}) {
 	return (
