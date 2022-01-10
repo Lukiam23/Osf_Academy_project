@@ -9,8 +9,11 @@
 	display: flex;
 	position: fixed;
 	height: 70px;
-	z-index: 1;
-	
+	z-index: 1;	
+}
+
+#check{
+	display: none;
 }
 
 .searchBox{
@@ -22,14 +25,19 @@
 	height: 70px;
 }
 
-.searchBox:hover > .headerSearchInput{
+
+#check:checked ~ .searchBox .headerSearchInput{
 	width: 200px;
 	border-radius: 50px;
 	outline: white solid 1px;
 	background: white;
 }
 
-.searchBox:hover > .searchButton{
+.searchButton label:hover{
+	cursor: pointer;
+}
+
+#check:checked ~ .searchBox .searchButton{
 	background: #ecf0f1;
 	color: #3498db;
 }
