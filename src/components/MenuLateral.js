@@ -25,8 +25,11 @@ function MenuLateral() {
 
 	return (
 		<div className={styles.menuContainer}>
+			<input type="checkbox" id={styles.menuIcon}></input>
 			<div className={styles.menuButton}>
-				<span><i class="fas fa-bars"></i></span>
+				<label for={styles.menuIcon}>
+					<span><i class="fas fa-bars"></i></span>
+				</label>
 			</div>
 
 			<div className={styles.selectAble}>

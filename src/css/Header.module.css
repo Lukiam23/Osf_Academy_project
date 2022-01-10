@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600');
+
+
 .headerContainer{
 	top: 0;
 	left: 0;
@@ -46,9 +49,10 @@
 	border-radius: 50px 50px;
 	border: none;
 	outline: none;
-	color:  white;
+	color:  black;
 	padding-left: 10px;
 	font-size: 16px;
+	font-family: Montserrat,  sans-serif;
 	transition: 0.4s;
 	line-height: 40px;
 }
@@ -105,12 +109,23 @@
 		border-radius: 0;
 		background: white;
 		height: 30px;
-		color:  white;
+		color:  black;
 		padding-left: 10px;
 		font-size: 16px;
 		line-height: 40px;
 		margin-right: 0;
 
+	}
+
+	.searchBox:hover > .headerSearchInput{
+		width: 70%;
+		border-radius: 0px;
+		outline: none;
+	}
+
+	.searchBox:hover > .searchButton{
+		background: #ecf0f1;
+		color: #3498db;
 	}
 
 }
