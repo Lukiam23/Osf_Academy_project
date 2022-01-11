@@ -4,13 +4,12 @@
 
 .cardContainer{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  position: absolute;
+  grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  right: 0px;
+  left: 200px;
   margin: 20px auto;
-  padding-top: 20px;
-  padding-bottom: 100px;
-  padding-left: 200px;
-  padding-right: 80px;
-  width: 90%;
+  width: 70%;
 }
 
 
@@ -27,40 +26,42 @@
   }
 }
 
-@media screen and (max-width:  1706px){
+@media screen and (max-width:  1978px){
   .cardContainer{
+    left: 400px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
-@media screen and (max-width:  1547px){
+@media screen and (max-width:  1706px){
   .cardContainer{
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    left: 300px;
+    right: 40px;
   }
 }
 
-@media screen and (max-width:  1271px){
-  .cardContainer{
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 90%;
-  }
+1529
+
+@media screen and (max-width:  1529px){
+   .cardContainer{
+      grid-template-columns: 1fr 1fr 1fr;
+      left: 300px;
+      right: 40px;
+    }
 }
 
-@media screen and (max-width:  973px){
-  .cardContainer{
-    grid-template-columns: 1fr 1fr;
-    width: 90%;
-  }
+@media screen and (max-width: 1347px){
+    .cardContainer{
+      grid-template-columns: 1fr 1fr;
+    }
 }
 
-@media screen and (max-width:  733px){
+@media screen and (max-width:  751px){
   .cardContainer{
     grid-template-columns: 1fr;
     width: 100%;
-    margin: 50px auto;
-    padding-top: 20px;
-    padding-bottom: 100px;
-    padding-left: 80px;
-    padding-right: 80px;
+    margin: 20px auto;
+
   }
 }
