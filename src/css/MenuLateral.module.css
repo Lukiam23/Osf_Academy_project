@@ -46,7 +46,7 @@
 }
 
 .selectAble header{
-	font-size: 38px;
+	font-size: 35px;
 	color: white;
 	line-height: 70px;
 	text-align: center;
@@ -60,7 +60,7 @@
 	height: 65px;
 	width: 100%;
 	color: white;
-	font-size: 28px;
+	font-size: 23px;
 	line-height: 65px;
 	box-sizing: border-box;
 	border-bottom: 1px solid black;
@@ -113,7 +113,7 @@
 
 	.selectAble{
 		left: -900px;
-		width: 70%;
+		width: 300px;
 	}
 
 	.menuButton{
