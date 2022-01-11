@@ -41,23 +41,23 @@
 
 @media screen and (max-width:  2840px){
 	.cardContainers{
-		width: 360px;
-		height: 510px;
+		width: 200px;
+		height: 340px;
 		margin: 20px auto;
 	}
 
 	.cardContainers img{
-		width: 250px;
-		height: 250px;
+		width: 150px;
+		height: 150px;
 
 	}
 
 	.nomePreco{
-		font-size: 30px;
+		font-size: 15px;
 	}
 
 	.descricao{
-		font-size: 34px;
+		font-size: 19px;
 	}
   
 }
@@ -86,7 +86,7 @@
 }
 
 
-@media screen and (max-width: 976x){
+@media screen and (max-width: 976px){
   	.cardContainers{
 		width: 300px;
 		height: 490px;
@@ -108,3 +108,26 @@
 	}
 }
 
+
+
+@media screen and (max-width: 733px){
+  	.cardContainers{
+		width: 300px;
+		height: 490px;
+		margin: 20px auto;
+	}
+
+	.cardContainers img{
+		width: 230px;
+		height: 230px;
+
+	}
+
+	.nomePreco{
+		font-size: 26px;
+	}
+
+	.descricao{
+		font-size: 30px;
+	}
+}

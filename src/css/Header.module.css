@@ -33,13 +33,14 @@
 	background: white;
 }
 
-.searchButton label:hover{
-	cursor: pointer;
-}
 
 #check:checked ~ .searchBox .searchButton{
 	background: #ecf0f1;
 	color: #3498db;
+}
+
+.searchButton label:hover{
+	cursor: pointer;
 }
 
 .headerSearchInput::placeholder {
@@ -66,7 +67,7 @@
 }
 
 .headerContainer h1{
-	margin-left: 70px;
+	margin-left: 30px;
 	color: white;
 }
 
@@ -87,7 +88,7 @@
 }
 
 
-@media screen and (max-width:  579px){
+@media screen and (max-width:  733px){
 	.headerContainer{
 		height: 140px;
 		display: block;
@@ -125,15 +126,20 @@
 
 	}
 
-	.searchBox:hover > .headerSearchInput{
+	#check:checked ~ .searchBox .headerSearchInput{
 		width: 70%;
-		border-radius: 0px;
+		border-radius: 0;
 		outline: none;
 	}
 
-	.searchBox:hover > .searchButton{
+
+	#check:checked ~ .searchBox .searchButton{
 		background: #ecf0f1;
 		color: #3498db;
 	}
 
+	.headerContainer h1{
+		margin-left: 70px;
+		color: white;
+	}
 }

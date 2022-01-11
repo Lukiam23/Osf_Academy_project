@@ -4,58 +4,63 @@
 
 .cardContainer{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: 20px auto;
   padding-top: 20px;
   padding-bottom: 100px;
+  padding-left: 200px;
+  padding-right: 80px;
   width: 90%;
 }
 
 
 
-@media screen and (max-width:  2840px){
+@media screen and (max-width:  2520px){
+  .cardContainer{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width:  2409px){
   .cardContainer{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
-@media screen and (max-width:  2520px){
+@media screen and (max-width:  1706px){
   .cardContainer{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
-@media screen and (max-width:  2133px){
+@media screen and (max-width:  1547px){
   .cardContainer{
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-@media screen and (max-width:  1706px){
-  .cardContainer{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-@media screen and (max-width:  1302px){
+@media screen and (max-width:  1271px){
   .cardContainer{
     grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
   }
 }
 
-@media screen and (max-width:  976px){
+@media screen and (max-width:  973px){
   .cardContainer{
     grid-template-columns: 1fr 1fr;
-    width: 100%;
+    width: 90%;
   }
 }
 
-@media screen and (max-width:  670px){
+@media screen and (max-width:  733px){
   .cardContainer{
     grid-template-columns: 1fr;
     width: 100%;
-    padding-top: 80px;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin: 50px auto;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
