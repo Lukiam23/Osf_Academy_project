@@ -7,9 +7,9 @@
   position: absolute;
   grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   right: 0px;
-  left: 200px;
+  left: 400px;
   margin: 20px auto;
-  width: 70%;
+  width: 80%;
 }
 
 
@@ -36,32 +36,38 @@
 @media screen and (max-width:  1706px){
   .cardContainer{
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    left: 300px;
-    right: 40px;
+    left: 350px;
   }
 }
 
-1529
 
 @media screen and (max-width:  1529px){
    .cardContainer{
       grid-template-columns: 1fr 1fr 1fr;
       left: 300px;
-      right: 40px;
     }
 }
 
-@media screen and (max-width: 1347px){
+@media screen and (max-width: 1173px){
     .cardContainer{
       grid-template-columns: 1fr 1fr;
+      top: 50px;
+      left: 360px;
     }
 }
 
-@media screen and (max-width:  751px){
+@media screen and (max-width: 885px){
+    .cardContainer{
+      left: 300px;
+    }
+}
+
+@media screen and (max-width:  818px){
   .cardContainer{
     grid-template-columns: 1fr;
     width: 100%;
-    margin: 20px auto;
+    left: 0;
+    margin: 50px auto;
 
   }
 }

@@ -73,7 +73,7 @@
 
 .searchButton{
 	position: absolute;
-	right: 0px;
+	right: 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 10px;
@@ -88,7 +88,7 @@
 }
 
 
-@media screen and (max-width:  733px){
+@media screen and (max-width:  818px){
 	.headerContainer{
 		height: 140px;
 		display: block;
@@ -98,8 +98,7 @@
  .searchBox{
 		background: none;
 		position: absolute;
-		right: 0;
-		width: 100%;
+		width: 90%;
 		display: flex;
 		height: 70px;
 		margin: 0 auto;

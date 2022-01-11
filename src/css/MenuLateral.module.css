@@ -88,6 +88,10 @@
 
 }
 
+.checkbox label:hover{
+	cursor: pointer;
+}
+
 .selectAble::-webkit-scrollbar{
 	width: 0px;
 }
@@ -99,15 +103,17 @@
 	}
 }
 
-@media screen and (max-width:  733px){
+@media screen and (max-width:  818px){
 
 	#menuIcon:checked ~ .selectAble{
 		left: 0;
+		top: 140px;
 
 	}
 
 	.selectAble{
 		left: -900px;
+		width: 70%;
 	}
 
 	.menuButton{
