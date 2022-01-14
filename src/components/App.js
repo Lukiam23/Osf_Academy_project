@@ -7,7 +7,7 @@ import React from "react";
 import styles from '../css/App.module.css';
 
 
-const baseURL = 'http://localhost:5000/cards';
+const baseURL = 'https://my-json-server.typicode.com/Lukiam23/Osf_Academy_project/cards';
 
 function App() {
 
@@ -23,7 +23,8 @@ function App() {
       setState(res.data);
     });
   }, []);
-
+  
+  if (!state) return null;
 
   return (
     <div className={styles.App}>
@@ -35,12 +36,12 @@ function App() {
       <MenuLateral />
       <Header img='images/pokeball.png' alt='pokeball'/>
 
-      <div className={styles.cardContainer}>
-              {state.map( obj => {
-                return (
-                  <Card nome={obj.nome} tipo={obj.tipo} preco={obj.preco} img={obj.img} alt={obj.alt}/>
-                );})}
-              }
+      <div className={styles.cardContainer}>    
+        {state.map( obj => {
+          return (
+            <Card nome={obj.nome} tipo={obj.tipo} preco={obj.preco} img={obj.img} alt={obj.alt}/>
+          );})}
+        
 
       </div>
 
