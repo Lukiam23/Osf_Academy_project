@@ -87,55 +87,6 @@
   
 }
 
-/*@media screen and (max-width:  1024px){
-		.cardContainers{
-			width: 140px;
-			height: 250px;
-			margin-left: 0px;
-		}
-
-		.cardContainers img{
-			width: 100px;
-			height: 100px;
-
-		}
-
-		.nomePreco{
-			font-size: 10px;
-		}
-
-		.descricao{
-			font-size: 14px;
-		}
-  
-}*/
-
-
-/*@media screen and (max-width: 970px){
-  	.cardContainers{
-		width: 200px;
-		height: 300px;
-		margin: 20px auto;
-		box-sizing: border-box;
-	}
-
-	.cardContainers img{
-		width: 130px;
-		height: 130px;
-
-	}
-
-	.nomePreco{
-		font-size: 15px;
-	}
-
-	.descricao{
-		font-size: 19px;
-	}
-}*/
-
-
-
 @media screen and (max-width: 818px){
   	.cardContainers{
 		width: 250px;
