@@ -16,6 +16,31 @@
 	display: none;
 }
 
+.options{
+	width: 100%;
+	height: 80%;
+	background: white;
+	margin: 2px auto;
+	text-align: left;
+	border-top: black solid 1px;
+	font-family: Montserrat,  sans-serif;
+	color: black;
+  opacity: 0.5;
+  padding-left: 10px;
+  visibility: hidden;
+
+}
+
+.inputBox{
+	position: absolute;
+	box-sizing: border-box;
+	display: block;
+	background: none;
+	width: 240px;
+	margin-top: 10px;
+	transition: width 0.4s;
+}
+
 .searchBox{
 	background: none;
 	position: absolute;
@@ -45,13 +70,11 @@
 
 .headerSearchInput::placeholder {
   color: black;
-  opacity: 1; 
+  opacity: 0.5; 
 }
 
 .headerSearchInput{
-	margin-left: 20px;
-	margin-top: 15px;
-	margin-bottom: 10px;
+	margin-top: 5px;
 	width: 0px;
 	height: 30px;
 	background: none;
