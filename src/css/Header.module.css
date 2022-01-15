@@ -27,17 +27,24 @@
 	color: black;
   opacity: 0.5;
   visibility: hidden;
+  overflow-y: scroll;
 
 }
+
+.options::-webkit-scrollbar{
+	width: 0px;
+}
+
 
 .inputBox{
 	position: absolute;
 	box-sizing: border-box;
 	display: block;
 	background: none;
+	margin-top: 10px;
 	width: 0px;
 	height: 0px;
-	margin-top: 10px;
+	
 }
 
 .searchBox{
@@ -52,9 +59,17 @@
 
 #check:checked ~ .searchBox .headerSearchInput{
 	width: 200px;
-	border-radius: 50px;
-	outline: white solid 1px;
 	background: white;
+}
+
+#check:checked ~ .searchBox .inputBox{
+	background: white;
+	padding: 0px 20px 20px 20px;
+	border-radius: 10px 10px;
+	box-shadow: 0px 4px 8px 0px rgba(1,0,0,.8); 
+	width: 240px;
+	height: 40px;
+	margin-right : 10px;
 }
 
 
@@ -73,11 +88,10 @@
 }
 
 .headerSearchInput{
-	margin-top: 5px;
+	margin: 5px auto;
 	width: 0px;
 	height: 30px;
 	background: none;
-	border-radius: 50px 50px;
 	border: none;
 	outline: none;
 	color:  black;

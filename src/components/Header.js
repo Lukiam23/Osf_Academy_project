@@ -3,17 +3,21 @@ import styles from '../css/Header.module.css'
 
 
 
-function Header({img,alt}) {
+function Header({img,alt,data}) {
 	const [show, setShow] = React.useState(null);
+	const [found, setFound] = React.useState(null);
 
 	const options = () =>{
 		let divInput = document.getElementById('headerSearchInput');
-
 		if(divInput.value){
 			setShow(true);
 		} else {
 			setShow(false)
 		}		
+		
+		setFound(data.map((value,key) => {
+			return <div><a className={styles.dataItem} href={value.nome}>{value.nome}</a></div>
+		}));	
 	}
 
 	const searchName = () =>{
@@ -22,14 +26,7 @@ function Header({img,alt}) {
 	}
 
 	const visibleBox = {
-		"padding": "0px 20px 20px 20px",
-		"border-radius": "10px 10px",
-		"box-shadow": "0px 4px 8px 0px rgba(1,0,0,.8)", 
-		"height": "200px",
-		"background": "white",
-		"width": "240px",
-		"height": "100px",
-		"margin-right" : "10px"
+		"height": "140px",
 	};
 
 	const visibleOptions = {
@@ -45,6 +42,7 @@ function Header({img,alt}) {
 				<div id="box" className={styles.inputBox} style={ show ? visibleBox : {}}>
 					<input type="text" id="headerSearchInput" onChange={options} placeholder="Insira um pokémon" className={styles.headerSearchInput}/>
 					<div id="options" style={ show ? visibleOptions : {}} className={styles.options}>
+						{found}
 					</div>
 				</div>
 				<a className={styles.searchButton}  href="#">

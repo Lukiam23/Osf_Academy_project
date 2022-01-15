@@ -34,7 +34,7 @@ function App() {
       </Helmet>
       
       <MenuLateral />
-      <Header img='images/pokeball.png' alt='pokeball'/>
+      <Header img='images/pokeball.png' alt='pokeball' data={state}/>
 
       <div className={styles.cardContainer}>    
         {state.map( obj => {
