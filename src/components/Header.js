@@ -16,13 +16,20 @@ function Header({img,alt}) {
 		}		
 	}
 
-	const visibleBox = {
-		padding: "0px 20px 20px 20px",
+	const searchName = () =>{
+		let divInput = document.getElementById('headerSearchInput');
+		setShow(false)
+	}
 
+	const visibleBox = {
+		"padding": "0px 20px 20px 20px",
 		"border-radius": "10px 10px",
 		"box-shadow": "0px 4px 8px 0px rgba(1,0,0,.8)", 
-		height: "200px",
-		background: "white"
+		"height": "200px",
+		"background": "white",
+		"width": "240px",
+		"height": "100px",
+		"margin-right" : "10px"
 	};
 
 	const visibleOptions = {
@@ -41,7 +48,7 @@ function Header({img,alt}) {
 					</div>
 				</div>
 				<a className={styles.searchButton}  href="#">
-					<label for={styles.check}>
+					<label onClick={searchName} for={styles.check}>
 						<i class="fas fa-search"></i>
 					</label>
 				</a>
