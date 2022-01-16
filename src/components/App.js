@@ -16,6 +16,7 @@ function App() {
   // state => estado inicial
   // setState => função para mudar o estado inicial
   const [state, setState] = React.useState(null);
+  const [selected, setSelected] = React.useState(null);
 
   React.useEffect(() => {
     axios.get(baseURL)
@@ -33,9 +34,9 @@ function App() {
         <title>RocketMarket</title>
       </Helmet>
       
-      <MenuLateral />
+      <MenuLateral selected = {selected} setSelected = {setSelected}/>
       <Header img='images/pokeball.png' alt='pokeball' data={state}/>
-
+      
       <div className={styles.cardContainer}>    
         {state.map( obj => {
           return (

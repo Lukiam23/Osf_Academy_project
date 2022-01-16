@@ -1,10 +1,45 @@
 import styles from '../css/MenuLateral.module.css'
 import CheckBox from './CheckBox'
+import React from "react";
 
+function MenuLateral({selected, setSelected}) {
+	let display = "";
+	let initialSetup = {
+		"Planta" : false,
+		"Fogo" : false,
+		"Água" : false,
+		"Inseto" : false,
+		"Normal" : false,
+		"Venenoso" : false,
+		"Elétrico" : false,
+		"Terra" : false,
+		"Pedra" : false,
+		"Voador" : false,
+		"Fantasma" : false,
+		"Gelo" : false,
+		"Dragão" : false,
+		"Metálico" : false,
+		"Sombrio" : false,
+		"Fada" : false,
+		"Psíquico" : false
+	};
 
-function MenuLateral() {
-	function showTypes() {
-		let element = document.getElementById('type');
+	React.useEffect( () => {
+		setSelected(initialSetup);
+	}, []);
+
+	function setType(){
+		display = "type";
+		show();
+	}
+
+	function setPrice(){
+		display = "price";
+		show();
+	}
+
+	function show() {
+		let element = document.getElementById(display);
 		if(element.style.display === "block"){
 			element.style.display = "none";
 		} else{
@@ -13,13 +48,9 @@ function MenuLateral() {
 		
 	}
 
-	function showPrices() {
-		let element = document.getElementById('price');
-		if(element.style.display === "block"){
-			element.style.display = "none";
-		} else{
-			element.style.display = "block";
-		}
+	function displaySelected(e) {
+		selected[e.target.value] = e.target.checked;
+		console.log(selected)
 		
 	}
 
@@ -35,11 +66,11 @@ function MenuLateral() {
 			<div className={styles.selectAble}>
 				<header>Menu</header>
 				<nav>
-					<a href="#" onClick={showTypes}>
+					<a href="#" onClick={setType}>
 						<span>Tipo</span>
 					</a>
 
-					<div id="type" className={styles.checkbox}>
+					<div id="type" onChange={displaySelected} className={styles.checkbox}>
 						<CheckBox tipo='Planta' />
 						<CheckBox tipo='Fogo' />
 						<CheckBox tipo='Água' />
@@ -59,7 +90,7 @@ function MenuLateral() {
 						<CheckBox tipo='Psíquico' />		
 					</div>
 
-					<a href="#" onClick={showPrices}>
+					<a href="#" onClick={setPrice}>
 						<span>Preço</span>
 					</a>
 

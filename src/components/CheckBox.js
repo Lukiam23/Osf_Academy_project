@@ -1,4 +1,5 @@
 function CheckBox({tipo}) {
+
 	return (
 		<div>	
 			<label>
