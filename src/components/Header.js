@@ -6,17 +6,23 @@ import styles from '../css/Header.module.css'
 function Header({img,alt,data}) {
 	const [show, setShow] = React.useState(null);
 	const [found, setFound] = React.useState(null);
+	const filterFunction = (nome, searchWord) => { return nome.includes(searchWord)}
 
 	const options = () =>{
 		let divInput = document.getElementById('headerSearchInput');
-		if(divInput.value){
+		let searchWord = divInput.value;
+		if(searchWord){
 			setShow(true);
 		} else {
 			setShow(false)
 		}		
+
+		const newFilter = data.filter((value) => {
+			return filterFunction(value.nome.toLowerCase(),searchWord.toLowerCase())
+		});
 		
-		setFound(data.map((value,key) => {
-			return <div><a className={styles.dataItem} href={value.nome}>{value.nome}</a></div>
+		setFound(newFilter.map((value,key) => {
+			return <div className={styles.dataItem}><a href={value.nome}><p>{value.nome}</p></a></div>
 		}));	
 	}
 
@@ -27,6 +33,8 @@ function Header({img,alt,data}) {
 
 	const visibleBox = {
 		"height": "140px",
+		"width": "80%",
+
 	};
 
 	const visibleOptions = {

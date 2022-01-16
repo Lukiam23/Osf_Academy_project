@@ -16,6 +16,12 @@
 	display: none;
 }
 
+.dataItem a{
+	color: black;
+	margin: 0;
+	
+}
+
 .options{
 	width: 100%;
 	height: 70%;
@@ -27,12 +33,13 @@
 	color: black;
   opacity: 0.5;
   visibility: hidden;
+  overflow: hidden;
   overflow-y: scroll;
 
 }
 
 .options::-webkit-scrollbar{
-	width: 0px;
+	display: none;
 }
 
 
@@ -58,7 +65,7 @@
 
 
 #check:checked ~ .searchBox .headerSearchInput{
-	width: 200px;
+	width: 100%;
 	background: white;
 }
 
@@ -67,7 +74,7 @@
 	padding: 0px 20px 20px 20px;
 	border-radius: 10px 10px;
 	box-shadow: 0px 4px 8px 0px rgba(1,0,0,.8); 
-	width: 240px;
+	width: 80%;
 	height: 40px;
 	margin-right : 10px;
 }
@@ -95,7 +102,7 @@
 	border: none;
 	outline: none;
 	color:  black;
-	padding-left: 10px;
+	padding-left: 0px;
 	font-size: 16px;
 	font-family: Montserrat,  sans-serif;
 	transition: 0.4s;
@@ -126,6 +133,18 @@
 
 
 @media screen and (max-width:  818px){
+
+	.inputBox{
+		position: absolute;
+		box-sizing: border-box;
+		display: block;
+		background: none;
+		margin-top: 10px;
+		width: 100%;
+		height: 140px;
+		
+	}
+
 	.headerContainer{
 		height: 140px;
 		display: block;

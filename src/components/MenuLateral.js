@@ -55,7 +55,8 @@ function MenuLateral() {
 						<CheckBox tipo='Dragão' />
 						<CheckBox tipo='Metálico' />
 						<CheckBox tipo='Sombrio' />
-						<CheckBox tipo='Fada' />		
+						<CheckBox tipo='Fada' />
+						<CheckBox tipo='Psíquico' />		
 					</div>
 
 					<a href="#" onClick={showPrices}>
