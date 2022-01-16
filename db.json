@@ -1,14 +1,14 @@
 {
 	"cards" : [
-		{"nome":"Pikachu", "tipo":"Elétrico", "preco":"R$ 10.000", "img":"images/Pikachu.png", "alt":"Pikachu"},
-        {"nome":"Articuno", "tipo":"Gelo Voador", "preco":"R$ 21.000", "img":"images/Articuno.png", "alt":"Articuno"},
-        {"nome":"Clefairy", "tipo":"Fada", "preco":"R$ 2.000", "img":"images/Clefairy.png", "alt":"Clefairy"},
-	    {"nome":"Zapdos", "tipo":"Elétrico", "preco":"R$ 21.000", "img":"images/Zapdos.png", "alt":"Zapdos"},
-        {"nome":"Bulbasaur ", "tipo":"Planta", "preco":"R$ 2.000", "img":"images/Bulbasaur.png", "alt":"Bulbasaur"},
-        {"nome":"Charmander ", "tipo":"Fogo", "preco":"R$ 2.000", "img":"images/Charmander.png", "alt":"Charmander"},
-        {"nome":"Dragonite  ", "tipo":"Dragão Voador", "preco":"R$ 21.000", "img":"images/Dragonite.png", "alt":"Dragonite"},
-        {"nome":"Mewtwo", "tipo":"Psíquico", "preco":"R$ 21.000", "img":"images/Mewtwo.png", "alt":"Mewtwo"},
-        {"nome":"Mew", "tipo":"Psíquico", "preco":"R$ 21.000", "img":"images/Mew.png", "alt":"Mew"},
-        {"nome":"Chikorita ", "tipo":"Planta", "preco":"R$ 2.000", "img":"images/Chikorita.png", "alt":"Chikorita"}
+		{"nome":"Pikachu", "tipo":"Elétrico", "preco":10000, "img":"images/Pikachu.png", "alt":"Pikachu"},
+        {"nome":"Articuno", "tipo":"Gelo Voador", "preco":21000, "img":"images/Articuno.png", "alt":"Articuno"},
+        {"nome":"Clefairy", "tipo":"Fada", "preco":2000, "img":"images/Clefairy.png", "alt":"Clefairy"},
+	    {"nome":"Zapdos", "tipo":"Elétrico", "preco":21000, "img":"images/Zapdos.png", "alt":"Zapdos"},
+        {"nome":"Bulbasaur ", "tipo":"Planta", "preco":2000, "img":"images/Bulbasaur.png", "alt":"Bulbasaur"},
+        {"nome":"Charmander ", "tipo":"Fogo", "preco":2000, "img":"images/Charmander.png", "alt":"Charmander"},
+        {"nome":"Dragonite  ", "tipo":"Dragão Voador", "preco":21.000, "img":"images/Dragonite.png", "alt":"Dragonite"},
+        {"nome":"Mewtwo", "tipo":"Psíquico", "preco":21000, "img":"images/Mewtwo.png", "alt":"Mewtwo"},
+        {"nome":"Mew", "tipo":"Psíquico", "preco":21000, "img":"images/Mew.png", "alt":"Mew"},
+        {"nome":"Chikorita ", "tipo":"Planta", "preco":2000, "img":"images/Chikorita.png", "alt":"Chikorita"}
 	]
 }
