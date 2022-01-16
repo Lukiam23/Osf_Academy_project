@@ -21,10 +21,25 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 	
 	const seletionType = (value, selected) => {
 		let match = false
+
 		value.tipo.split(' ').forEach( key =>{
 			Object.keys(selected).forEach((type,index) => {
-				if(selected[type]){
-					if(type.includes(key)) match = true
+				let array = type.split(' ');
+				if(selected[type] && array[0] !== 'R$'){
+					if(type.includes(key)){
+						match = true;
+					} else {
+						match = false;
+					}
+				} else if(selected[type] && array[0] === 'R$') {
+
+					let range = array.filter(string => !isNaN(string)).map(string => Number(string))
+
+					if(range[0] < value.preco && value.preco <= range[1]){
+						match = true;
+					} else {
+						match = false;
+					}
 				}
 			})
 		})
