@@ -40,7 +40,7 @@ function App() {
       <div className={styles.cardContainer}>  
         {display.map( obj => {
           return (
-            <Card nome={obj.nome} tipo={obj.tipo} preco={obj.preco} img={obj.img} alt={obj.alt}/>
+            <Card nome={obj.nome} tipo={obj.tipo} preco={'R$ '+obj.preco} img={obj.img} alt={obj.alt}/>
           );})}
       </div>
 

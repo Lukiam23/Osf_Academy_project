@@ -15,7 +15,6 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 	const seletion = (value, selected) => {
 		let match = false
 		value.tipo.split(' ').forEach( key =>{
-			let preco = value.preco.split(' ').map(value => {if(!isNaN(value)){ return Number(value)}})
 			Object.keys(selected).forEach((type,index) => {
 				if(selected[type]){
 					if(type.includes(key)) match = true
@@ -115,16 +114,16 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 						<CheckBox tipo='R$ 4000 - R$ 5000' />
 						<CheckBox tipo='R$ 6000 - R$ 7000' />
 						<CheckBox tipo='R$ 8000 - R$ 9000' />
-						<CheckBox tipo='R$ 10.000 - R$ 11.000' />
-						<CheckBox tipo='R$ 12.000 - R$ 13.000' />
-						<CheckBox tipo='R$ 13.000 - R$ 14.000' />
-						<CheckBox tipo='R$ 14.000 - R$ 15.000' />
-						<CheckBox tipo='R$ 15.000 - R$ 16.000' />
-						<CheckBox tipo='R$ 16.000 - R$ 17.000' />
-						<CheckBox tipo='R$ 17.000 - R$ 18.000' />
-						<CheckBox tipo='R$ 18.000 - R$ 19.000' />
-						<CheckBox tipo='R$ 19.000 - R$ 20.000' />
-						<CheckBox tipo='R$ 20.000 - R$ 21.000' />
+						<CheckBox tipo='R$ 10000 - R$ 11000' />
+						<CheckBox tipo='R$ 12000 - R$ 13000' />
+						<CheckBox tipo='R$ 13000 - R$ 14000' />
+						<CheckBox tipo='R$ 14000 - R$ 15000' />
+						<CheckBox tipo='R$ 15000 - R$ 16000' />
+						<CheckBox tipo='R$ 16000 - R$ 17000' />
+						<CheckBox tipo='R$ 17000 - R$ 18000' />
+						<CheckBox tipo='R$ 18000 - R$ 19000' />
+						<CheckBox tipo='R$ 19000 - R$ 20000' />
+						<CheckBox tipo='R$ 20000 - R$ 21000' />
 						
 					</div>
 
