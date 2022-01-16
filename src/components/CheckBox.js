@@ -1,8 +1,10 @@
+import styles from '../css/CheckBox.module.css'
+
 function CheckBox({tipo}) {
 
 	return (
 		<div>	
-			<label>
+			<label className={styles.Item}>
 				<input type="checkbox" value={tipo} />
 				{tipo}
 			</label>
