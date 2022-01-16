@@ -9,7 +9,6 @@
         {"nome":"Dragonite  ", "tipo":"Dragão Voador", "preco":"R$ 21.000", "img":"images/Dragonite.png", "alt":"Dragonite"},
         {"nome":"Mewtwo", "tipo":"Psíquico", "preco":"R$ 21.000", "img":"images/Mewtwo.png", "alt":"Mewtwo"},
         {"nome":"Mew", "tipo":"Psíquico", "preco":"R$ 21.000", "img":"images/Mew.png", "alt":"Mew"},
-        {"nome":"Chikorita ", "tipo":"Planta", "preco":"R$ 2.000", "img":"images/Chikorita.png", "alt":"Chikorita"},
-
+        {"nome":"Chikorita ", "tipo":"Planta", "preco":"R$ 2.000", "img":"images/Chikorita.png", "alt":"Chikorita"}
 	]
 }
