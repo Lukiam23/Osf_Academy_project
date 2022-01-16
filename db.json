@@ -1,6 +1,6 @@
 {
 	"cards" : [
-		{"nome":"Pikachu", "tipo":"Elétrico", "preco":10000, "img":"images/Pikachu.png", "alt":"Pikachu"},
+		{"nome":"Pikachu", "tipo":"Elétrico", "preco":3000, "img":"images/Pikachu.png", "alt":"Pikachu"},
         {"nome":"Articuno", "tipo":"Gelo Voador", "preco":21000, "img":"images/Articuno.png", "alt":"Articuno"},
         {"nome":"Clefairy", "tipo":"Fada", "preco":2000, "img":"images/Clefairy.png", "alt":"Clefairy"},
 	    {"nome":"Zapdos", "tipo":"Elétrico", "preco":21000, "img":"images/Zapdos.png", "alt":"Zapdos"},

@@ -8,11 +8,18 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 
 	useEffect(() => {setSelected({})},[]);
 
+	useEffect(() => {
+		axios.get(baseURL)
+		.then((res) => {
+	    	setState(res.data);
+	    });
+	}, [selected]);
+
 	let display = "";
-	//value vai vim do nosso data
+	//value virá do nosso state
 	//selected é um obj que possui os tipos selecionados
 	
-	const seletion = (value, selected) => {
+	const seletionType = (value, selected) => {
 		let match = false
 		value.tipo.split(' ').forEach( key =>{
 			Object.keys(selected).forEach((type,index) => {
@@ -21,32 +28,35 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 				}
 			})
 		})
-
-
-
 		return match;
 	}
 
-	useEffect(() => {
-		axios.get(baseURL)
-		.then((res) => {
-	    	setState(res.data);
-	    });
-	}, [selected]);
+	const seletionPrice = (value, selected) => {
+		let match = false;
+		Object.keys(selected).forEach( key => {
+			let array = key.split(' ');
+			if(array[0] === 'R$'){
+				let range = array.map(string => {if(!isNaN(string)){return Number(string)}})
+				if(range[0] < value.preco && value.preco <= range[1]){
+					match = true;
+				}
+			}
+		})
+
+		return match
+	}
 
 
 	function setType(){
-		display = "type";
-		show();
+		show("type");
 	}
 
 	function setPrice(){
-		display = "price";
-		show();
+		show("price");
 	}
 
-	function show() {
-		let element = document.getElementById(display);
+	function show(id) {
+		let element = document.getElementById(id);
 		if(element.style.display === "block"){
 			element.style.display = "none";
 		} else{
@@ -58,7 +68,7 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 		selected[e.target.value] = e.target.checked;
 		let display = Object.values(selected).reduce( (rest, current) => rest || current )
 		const newData = state.filter( value => {
-			return seletion(value,selected);
+			return seletionType(value,selected);
 		})
 
 		if (display){
