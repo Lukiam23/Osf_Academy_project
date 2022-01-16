@@ -14,18 +14,18 @@ function App() {
   // state é um objeto do JavaScrip usado pelo React para representar uma informação sobre a situação atual da componente 
   //useState permite ter variáveis state em componentes que são função
   // state => estado inicial
-  // setState => função para mudar o estado inicial
-  const [state, setState] = React.useState(null);
+  // setDisplay => função para mudar o estado inicial
+  const [display, setDisplay] = React.useState(null);
   const [selected, setSelected] = React.useState(null);
 
   React.useEffect(() => {
     axios.get(baseURL)
     .then((res) => {
-      setState(res.data);
+      setDisplay(res.data);
     });
   }, []);
 
-  if (!state) return null;
+  if (!display) return null;
 
   return (
     <div className={styles.App}>
@@ -34,11 +34,11 @@ function App() {
         <title>RocketMarket</title>
       </Helmet>
       
-      <MenuLateral selected = {selected} setSelected = {setSelected}/>
-      <Header img='images/pokeball.png' alt='pokeball' data={state}/>
+      <MenuLateral selected = {selected} setSelected = {setSelected} data={display} setData={setDisplay} baseURL={baseURL}/>
+      <Header baseURL={baseURL}/>
       
-      <div className={styles.cardContainer}>    
-        {state.map( obj => {
+      <div className={styles.cardContainer}>  
+        {display.map( obj => {
           return (
             <Card nome={obj.nome} tipo={obj.tipo} preco={obj.preco} img={obj.img} alt={obj.alt}/>
           );})}

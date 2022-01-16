@@ -1,12 +1,21 @@
-import React from "react";
+import axios from 'axios'
 import styles from '../css/Header.module.css'
+import React, { useEffect } from "react";
 
 
 
-function Header({img,alt,data}) {
+function Header({baseURL}) {
+	const [data, setData] = React.useState(null);
 	const [show, setShow] = React.useState(null);
 	const [found, setFound] = React.useState(null);
 	const filterFunction = (nome, searchWord) => { return nome.includes(searchWord)}
+
+	useEffect(() => {
+		axios.get(baseURL)
+		.then((res) => {
+	    	setData(res.data);
+	    });
+	}, [show]);
 
 	const options = () =>{
 		let divInput = document.getElementById('headerSearchInput');

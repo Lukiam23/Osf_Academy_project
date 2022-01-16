@@ -1,12 +1,38 @@
+import axios from 'axios'
 import styles from '../css/MenuLateral.module.css'
 import CheckBox from './CheckBox'
-import React from "react";
+import React, { useEffect } from "react";
 
-function MenuLateral({selected, setSelected}) {
+function MenuLateral({selected, setSelected, data, setData, baseURL}) {
+	const [state, setState] = React.useState(null);
+
+	useEffect(() => {setSelected({})},[]);
+
 	let display = "";
-	React.useEffect( () => {
-		setSelected({});
-	}, []);
+	//value vai vim do nosso data
+	//selected é um obj que possui os tipos selecionados
+	
+	const seletion = (value, selected) => {
+		let match = false
+		value.tipo.split(' ').forEach( key =>{
+			Object.keys(selected).forEach((type) => {
+				console.log(type)
+				if(selected[type]){
+					if(type.includes(key)) match = true
+				}
+			})
+		})
+
+		return match;
+	}
+
+	useEffect(() => {
+		axios.get(baseURL)
+		.then((res) => {
+	    	setState(res.data);
+	    });
+	}, [selected]);
+
 
 	function setType(){
 		display = "type";
@@ -27,8 +53,18 @@ function MenuLateral({selected, setSelected}) {
 		}
 	}
 
-	function displaySelected(e) {
+	function DisplaySelected(e) {
 		selected[e.target.value] = e.target.checked;
+		let display = Object.values(selected).reduce( (rest, current) => rest || current )
+		const newData = state.filter( value => {
+			return seletion(value,selected);
+		})
+
+		if (display){
+			setData(newData);	
+		} else {
+			setData(state);
+		}
 	}
 
 	return (
@@ -47,7 +83,7 @@ function MenuLateral({selected, setSelected}) {
 						<span>Tipo</span>
 					</a>
 
-					<div id="type" onChange={displaySelected} className={styles.checkbox}>
+					<div id="type" onChange={DisplaySelected} className={styles.checkbox}>
 						<CheckBox tipo='Planta' />
 						<CheckBox tipo='Fogo' />
 						<CheckBox tipo='Água' />
@@ -71,7 +107,7 @@ function MenuLateral({selected, setSelected}) {
 						<span>Preço</span>
 					</a>
 
-					<div id="price" onChange={displaySelected} className={styles.checkbox}>
+					<div id="price" onChange={DisplaySelected} className={styles.checkbox}>
 						<CheckBox tipo='R$ 1000 - R$ 2000' />
 						<CheckBox tipo='R$ 2000 - R$ 4000' />
 						<CheckBox tipo='R$ 4000 - R$ 5000' />
