@@ -4,28 +4,8 @@ import React from "react";
 
 function MenuLateral({selected, setSelected}) {
 	let display = "";
-	let initialSetup = {
-		"Planta" : false,
-		"Fogo" : false,
-		"Água" : false,
-		"Inseto" : false,
-		"Normal" : false,
-		"Venenoso" : false,
-		"Elétrico" : false,
-		"Terra" : false,
-		"Pedra" : false,
-		"Voador" : false,
-		"Fantasma" : false,
-		"Gelo" : false,
-		"Dragão" : false,
-		"Metálico" : false,
-		"Sombrio" : false,
-		"Fada" : false,
-		"Psíquico" : false
-	};
-
 	React.useEffect( () => {
-		setSelected(initialSetup);
+		setSelected({});
 	}, []);
 
 	function setType(){
@@ -45,7 +25,6 @@ function MenuLateral({selected, setSelected}) {
 		} else{
 			element.style.display = "block";
 		}
-		
 	}
 
 	function displaySelected(e) {
@@ -94,22 +73,22 @@ function MenuLateral({selected, setSelected}) {
 						<span>Preço</span>
 					</a>
 
-					<div id="price" className={styles.checkbox}>
-						<CheckBox tipo=' R$ 1000 - R$ 2000' />
-						<CheckBox tipo=' R$ 2000 - R$ 4000' />
-						<CheckBox tipo=' R$ 4000 - R$ 5000' />
-						<CheckBox tipo=' R$ 6000 - R$ 7000' />
-						<CheckBox tipo=' R$ 8000 - R$ 9000' />
-						<CheckBox tipo=' R$ 10.000 - R$ 11.000' />
-						<CheckBox tipo=' R$ 12.000 - R$ 13.000' />
-						<CheckBox tipo=' R$ 13.000 - R$ 14.000' />
-						<CheckBox tipo=' R$ 14.000 - R$ 15.000' />
-						<CheckBox tipo=' R$ 15.000 - R$ 16.000' />
-						<CheckBox tipo=' R$ 16.000 - R$ 17.000' />
-						<CheckBox tipo=' R$ 17.000 - R$ 18.000' />
-						<CheckBox tipo=' R$ 18.000 - R$ 19.000' />
-						<CheckBox tipo=' R$ 19.000 - R$ 20.000' />
-						<CheckBox tipo=' R$ 20.000 - R$ 21.000' />
+					<div id="price" onChange={displaySelected} className={styles.checkbox}>
+						<CheckBox tipo='R$ 1000 - R$ 2000' />
+						<CheckBox tipo='R$ 2000 - R$ 4000' />
+						<CheckBox tipo='R$ 4000 - R$ 5000' />
+						<CheckBox tipo='R$ 6000 - R$ 7000' />
+						<CheckBox tipo='R$ 8000 - R$ 9000' />
+						<CheckBox tipo='R$ 10.000 - R$ 11.000' />
+						<CheckBox tipo='R$ 12.000 - R$ 13.000' />
+						<CheckBox tipo='R$ 13.000 - R$ 14.000' />
+						<CheckBox tipo='R$ 14.000 - R$ 15.000' />
+						<CheckBox tipo='R$ 15.000 - R$ 16.000' />
+						<CheckBox tipo='R$ 16.000 - R$ 17.000' />
+						<CheckBox tipo='R$ 17.000 - R$ 18.000' />
+						<CheckBox tipo='R$ 18.000 - R$ 19.000' />
+						<CheckBox tipo='R$ 19.000 - R$ 20.000' />
+						<CheckBox tipo='R$ 20.000 - R$ 21.000' />
 						
 					</div>
 
