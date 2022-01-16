@@ -15,13 +15,15 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 	const seletion = (value, selected) => {
 		let match = false
 		value.tipo.split(' ').forEach( key =>{
-			Object.keys(selected).forEach((type) => {
-				console.log(type)
+			let preco = value.preco.split(' ').map(value => {if(!isNaN(value)){ return Number(value)}})
+			Object.keys(selected).forEach((type,index) => {
 				if(selected[type]){
 					if(type.includes(key)) match = true
 				}
 			})
 		})
+
+
 
 		return match;
 	}
