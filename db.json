@@ -6,7 +6,7 @@
 	    {"nome":"Zapdos", "tipo":"Elétrico", "preco":21000, "img":"images/Zapdos.png", "alt":"Zapdos"},
         {"nome":"Bulbasaur ", "tipo":"Planta", "preco":2000, "img":"images/Bulbasaur.png", "alt":"Bulbasaur"},
         {"nome":"Charmander ", "tipo":"Fogo", "preco":2000, "img":"images/Charmander.png", "alt":"Charmander"},
-        {"nome":"Dragonite  ", "tipo":"Dragão Voador", "preco":21.000, "img":"images/Dragonite.png", "alt":"Dragonite"},
+        {"nome":"Dragonite  ", "tipo":"Dragão Voador", "preco":21000, "img":"images/Dragonite.png", "alt":"Dragonite"},
         {"nome":"Mewtwo", "tipo":"Psíquico", "preco":21000, "img":"images/Mewtwo.png", "alt":"Mewtwo"},
         {"nome":"Mew", "tipo":"Psíquico", "preco":21000, "img":"images/Mew.png", "alt":"Mew"},
         {"nome":"Chikorita ", "tipo":"Planta", "preco":2000, "img":"images/Chikorita.png", "alt":"Chikorita"}
