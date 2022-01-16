@@ -29,8 +29,6 @@ function MenuLateral({selected, setSelected}) {
 
 	function displaySelected(e) {
 		selected[e.target.value] = e.target.checked;
-		console.log(selected)
-		
 	}
 
 	return (

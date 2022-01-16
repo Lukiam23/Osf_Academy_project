@@ -24,7 +24,7 @@ function App() {
       setState(res.data);
     });
   }, []);
-  
+
   if (!state) return null;
 
   return (
@@ -42,8 +42,6 @@ function App() {
           return (
             <Card nome={obj.nome} tipo={obj.tipo} preco={obj.preco} img={obj.img} alt={obj.alt}/>
           );})}
-        
-
       </div>
 
     </div>
