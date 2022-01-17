@@ -19,48 +19,59 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 	//value virá do nosso state
 	//selected é um obj que possui os tipos selecionados
 	
-	const seletionType = (value, selected) => {
-		let match = false
+	const seletion = (value, selected) => {
+		let matchType = false;
+		let matchPrice = false;
+		let typeRestriction = false;
+		let priceRestriction = false;
 
-		value.tipo.split(' ').forEach( key =>{
-			Object.keys(selected).forEach((type,index) => {
-				let array = type.split(' ');
-				if(selected[type] && array[0] !== 'R$'){
-					if(type.includes(key)){
-						match = true;
-					} else {
-						match = false;
-					}
-				} else if(selected[type] && array[0] === 'R$') {
 
-					let range = array.filter(string => !isNaN(string)).map(string => Number(string))
+		value.tipo.split(' ').forEach(type => {
+			Object.keys(selected).forEach( item => {
+				if (selected[item]){
+					let array = item.split(' ');
+					if(array[0] !== 'R$' && !matchType){
+						typeRestriction = true;
+						if(value.tipo.includes(item)){
+							matchType = true;
+						}
+					} else if(array[0] === 'R$' && matchPrice) {
+						priceRestriction = true;
+						let range = array.filter(string => !isNaN(string)).map(string => Number(string));
 
-					if(range[0] < value.preco && value.preco <= range[1]){
-						match = true;
-					} else {
-						match = false;
+						if(range[0] < value.preco && value.preco <= range[1]){
+							matchPrice = true;
+						} 
 					}
 				}
 			})
-		})
-		return match;
-	}
+		});
+		
+		/*Object.keys(selected).forEach((type) => {
+			if (!selected[type]) return false;
+			console.log(selected)
+			let array = type.split(' ');
+			if(selected[type] && array[0] !== 'R$'){
+				matchType = false;
 
-	const seletionPrice = (value, selected) => {
-		let match = false;
-		Object.keys(selected).forEach( key => {
-			let array = key.split(' ');
-			if(array[0] === 'R$'){
-				let range = array.map(string => {if(!isNaN(string)){return Number(string)}})
-				if(range[0] < value.preco && value.preco <= range[1]){
-					match = true;
+				if(value.tipo.includes(type)){
+					matchType = true;
 				}
+			} else if(selected[type] && array[0] === 'R$') {
+				matchPrice = false;
+
+				//pegar o intervalo em que o preço do pokemom está
+				let range = array.filter(string => !isNaN(string)).map(string => Number(string));
+
+				if(range[0] < value.preco && value.preco <= range[1]){
+					matchPrice = true;
+				} 
 			}
-		})
-
-		return match
+		})*/
+		
+		//só são aceitos pokemons que estão no intervalo de preço e no tipo passados
+		return (matchType && typeRestriction) || (matchPrice && priceRestriction);
 	}
-
 
 	function setType(){
 		show("type");
@@ -83,7 +94,7 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 		selected[e.target.value] = e.target.checked;
 		let display = Object.values(selected).reduce( (rest, current) => rest || current )
 		const newData = state.filter( value => {
-			return seletionType(value,selected);
+			return seletion(value,selected);
 		})
 
 		if (display){
