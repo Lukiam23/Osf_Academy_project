@@ -21,9 +21,10 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 	
 	const seletionType = (value, selected) => {
 		let matchType = false;
+		
 		const comparer = (key) => key.split(' ')[0] === 'R$' || key.split(' ')[0] !== 'R$' && !selected[key]
 		let display = Object.keys(selected).every(comparer)
-		console.log("type: ",display)
+
 		if (display) return true; //Se não há nenhum tipo selecionado retorna true
 		value.tipo.split(' ').forEach( type =>{
 			let selectedType = selected[type];
@@ -38,10 +39,11 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 
 	const seletionPrice = (value, selected) =>{
 		let matchPrice = false;
+
 		const comparer = (key) => key.split(' ')[0] !== 'R$' || key.split(' ')[0] === 'R$' && !selected[key]
 		let display = Object.keys(selected).every(comparer)
-		console.log("price: ",display)
 		if (display) return true; //Se não há nenhum intervalo de preço selecionado retorna true
+
 		Object.keys(selected).forEach( item =>{
 			if (selected[item]){
 				let array = item.split(' ');
