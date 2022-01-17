@@ -35,7 +35,7 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 						if(value.tipo.includes(item)){
 							matchType = true;
 						}
-					} else if(array[0] === 'R$' && matchPrice) {
+					} else if(array[0] === 'R$' && !matchPrice) {
 						priceRestriction = true;
 						let range = array.filter(string => !isNaN(string)).map(string => Number(string));
 
