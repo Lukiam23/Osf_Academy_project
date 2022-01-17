@@ -26,50 +26,32 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 		let priceRestriction = false;
 
 
-		value.tipo.split(' ').forEach(type => {
-			Object.keys(selected).forEach( item => {
-				if (selected[item]){
-					let array = item.split(' ');
-					if(array[0] !== 'R$' && !matchType){
-						typeRestriction = true;
-						if(value.tipo.includes(item)){
-							matchType = true;
-						}
-					} else if(array[0] === 'R$' && !matchPrice) {
-						priceRestriction = true;
-						let range = array.filter(string => !isNaN(string)).map(string => Number(string));
+		value.tipo.split(' ').forEach( type =>{
+			let selectedType = selected[type];
+			if(selectedType && !matchType){
+				typeRestriction = true;
+				matchType = true;
+			} 
+		})
 
-						if(range[0] < value.preco && value.preco <= range[1]){
-							matchPrice = true;
-						} 
+		Object.keys(selected).forEach( item =>{
+			if (selected[item]){
+				let array = item.split(' ');
+				if(array[0] === 'R$' && !matchPrice){
+					priceRestriction = true;
+					let range = array.filter(string => !isNaN(string)).map(string => Number(string));
+					if(range[0] < value.preco && value.preco <= range[1]){
+						matchPrice = true;
 					}
 				}
-			})
-		});
-		
-		/*Object.keys(selected).forEach((type) => {
-			if (!selected[type]) return false;
-			console.log(selected)
-			let array = type.split(' ');
-			if(selected[type] && array[0] !== 'R$'){
-				matchType = false;
-
-				if(value.tipo.includes(type)){
-					matchType = true;
-				}
-			} else if(selected[type] && array[0] === 'R$') {
-				matchPrice = false;
-
-				//pegar o intervalo em que o preço do pokemom está
-				let range = array.filter(string => !isNaN(string)).map(string => Number(string));
-
-				if(range[0] < value.preco && value.preco <= range[1]){
-					matchPrice = true;
-				} 
 			}
-		})*/
+		})
 		
 		//só são aceitos pokemons que estão no intervalo de preço e no tipo passados
+
+		console.log(value.nome,typeRestriction, priceRestriction,matchPrice,matchType)
+		if(typeRestriction && priceRestriction) return (matchType) && (matchPrice);
+
 		return (matchType && typeRestriction) || (matchPrice && priceRestriction);
 	}
 
