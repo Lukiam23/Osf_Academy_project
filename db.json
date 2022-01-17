@@ -29,6 +29,6 @@
         {"nome":"Magnemite", "tipo":"Elétrico Metálico", "preco":15090, "img":"images/Magnemite.png", "alt":"Magnemite"},
         {"nome":"Jolteon", "tipo":"Elétrico", "preco":15790, "img":"images/Jolteon.png", "alt":"Jolteon"},
         {"nome":"Regieleki", "tipo":"Elétrico", "preco":15100, "img":"images/Regieleki.png", "alt":"Regieleki"},
-        {"nome":"Flareon", "tipo":"Fogo", "preco":17100, "img":"images/Flareon.png", "alt":"Flareon"},
+        {"nome":"Flareon", "tipo":"Fogo", "preco":17100, "img":"images/Flareon.png", "alt":"Flareon"}
 	]
 }
