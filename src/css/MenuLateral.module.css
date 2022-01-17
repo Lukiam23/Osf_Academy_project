@@ -114,6 +114,7 @@
 	.selectAble{
 		left: -900px;
 		width: 300px;
+		height: calc(100% - 140px);
 	}
 
 	.menuButton{

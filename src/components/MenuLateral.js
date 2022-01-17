@@ -19,26 +19,33 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 	//value virá do nosso state
 	//selected é um obj que possui os tipos selecionados
 	
-	const seletion = (value, selected) => {
+	const seletionType = (value, selected) => {
 		let matchType = false;
-		let matchPrice = false;
-		let typeRestriction = false;
-		let priceRestriction = false;
-
-
+		const comparer = (key) => key.split(' ')[0] === 'R$' || key.split(' ')[0] !== 'R$' && !selected[key]
+		let display = Object.keys(selected).every(comparer)
+		console.log("type: ",display)
+		if (display) return true; //Se não há nenhum tipo selecionado retorna true
 		value.tipo.split(' ').forEach( type =>{
 			let selectedType = selected[type];
 			if(selectedType && !matchType){
-				typeRestriction = true;
 				matchType = true;
 			} 
 		})
+		
+		//só são aceitos pokemons que estão no tipo passado
+		return matchType 
+	}
 
+	const seletionPrice = (value, selected) =>{
+		let matchPrice = false;
+		const comparer = (key) => key.split(' ')[0] !== 'R$' || key.split(' ')[0] === 'R$' && !selected[key]
+		let display = Object.keys(selected).every(comparer)
+		console.log("price: ",display)
+		if (display) return true; //Se não há nenhum intervalo de preço selecionado retorna true
 		Object.keys(selected).forEach( item =>{
 			if (selected[item]){
 				let array = item.split(' ');
 				if(array[0] === 'R$' && !matchPrice){
-					priceRestriction = true;
 					let range = array.filter(string => !isNaN(string)).map(string => Number(string));
 					if(range[0] < value.preco && value.preco <= range[1]){
 						matchPrice = true;
@@ -46,13 +53,9 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 				}
 			}
 		})
-		
-		//só são aceitos pokemons que estão no intervalo de preço e no tipo passados
 
-		console.log(value.nome,typeRestriction, priceRestriction,matchPrice,matchType)
-		if(typeRestriction && priceRestriction) return (matchType) && (matchPrice);
-
-		return (matchType && typeRestriction) || (matchPrice && priceRestriction);
+		//só são aceitos pokemons que estão no intervalo de preço passado
+		return matchPrice
 	}
 
 	function setType(){
@@ -76,7 +79,9 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 		selected[e.target.value] = e.target.checked;
 		let display = Object.values(selected).reduce( (rest, current) => rest || current )
 		const newData = state.filter( value => {
-			return seletion(value,selected);
+			return seletionType(value,selected);
+		}).filter( value =>{
+			return seletionPrice(value,selected);
 		})
 
 		if (display){
