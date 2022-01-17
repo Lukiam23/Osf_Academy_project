@@ -21,18 +21,14 @@
         {"nome":"Sableye", "tipo":"Fantasma Sombrio", "preco":5000, "img":"images/Sableye.png", "alt":"Sableye"},
         {"nome":"Umbreon ", "tipo":"Sombrio", "preco":15000, "img":"images/Umbreon.png", "alt":"Umbreon"},
         {"nome":"Absol", "tipo":"Sombrio", "preco":16090, "img":"images/Absol.png", "alt":"Absol"},
-        {"nome":"Zarude", "tipo":"Sombrio Planta", "preco":17090, "img":"images/Zarude.png", "alt":"Zarude"},
         {"nome":"Copperajah", "tipo":"Metálico", "preco":18590, "img":"images/Copperajah.png", "alt":"Copperajah"},
         {"nome":"Duraludon", "tipo":"Metálico Dragão", "preco":19590, "img":"images/Duraludon.png", "alt":"Duraludon"},
-        {"nome":"Onix", "tipo":"Terra Pedra", "preco":14590, "img":"images/Onix.png", "alt":"Onix"},
         {"nome":"Delibird", "tipo":"Gelo Voador", "preco":13590, "img":"images/Delibird.png", "alt":"Delibird"},
         {"nome":"Glalie", "tipo":"Gelo", "preco":17590, "img":"images/Glalie.png", "alt":"Glalie"},
         {"nome":"Arbok", "tipo":"Venenoso", "preco":11590, "img":"images/Arbok.png", "alt":"Arbok"},
-        {"nome":"Zubat", "tipo":"Venenoso Voador", "preco":6590, "img":"images/Zubat.png", "alt":"Zubat"},
         {"nome":"Magnemite", "tipo":"Elétrico Metálico", "preco":15090, "img":"images/Magnemite.png", "alt":"Magnemite"},
         {"nome":"Jolteon", "tipo":"Elétrico", "preco":15790, "img":"images/Jolteon.png", "alt":"Jolteon"},
         {"nome":"Regieleki", "tipo":"Elétrico", "preco":15100, "img":"images/Regieleki.png", "alt":"Regieleki"},
         {"nome":"Flareon", "tipo":"Fogo", "preco":17100, "img":"images/Flareon.png", "alt":"Flareon"},
-        {"nome":"Magcargo ", "tipo":"Fogo Rocha", "preco":18100, "img":"images/Magcargo.png", "alt":"Magcargo"}
 	]
 }
