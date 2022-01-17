@@ -28,6 +28,6 @@
         {"nome":"Delibird", "tipo":"Gelo Voador", "preco":13590, "img":"images/Delibird.png", "alt":"Delibird"},
         {"nome":"Glalie", "tipo":"Gelo", "preco":17590, "img":"images/Glalie.png", "alt":"Glalie"},
         {"nome":"Arbok", "tipo":"Venenoso", "preco":11590, "img":"images/Arbok.png", "alt":"Arbok"},
-        {"nome":"Zubat", "tipo":"Venenoso Voador", "preco":6590, "img":"images/Zubat.png", "alt":"Zubat"},
+        {"nome":"Zubat", "tipo":"Venenoso Voador", "preco":6590, "img":"images/Zubat.png", "alt":"Zubat"}
 	]
 }
