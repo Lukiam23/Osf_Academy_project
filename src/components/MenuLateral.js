@@ -3,19 +3,11 @@ import styles from '../css/MenuLateral.module.css'
 import CheckBox from './CheckBox'
 import React, { useEffect } from "react";
 
-function MenuLateral({selected, setSelected, data, setData, baseURL}) {
+function MenuLateral({filtro, setFiltro, data, display, setDisplay}) {
 	const [state, setState] = React.useState(null);
 
-	useEffect(() => {setSelected({})},[]);
+	useEffect(() => {setFiltro({})},[]);
 
-	useEffect(() => {
-		axios.get(baseURL)
-		.then((res) => {
-	    	setState(res.data);
-	    });
-	}, [selected]);
-
-	let display = "";
 	//value virá do nosso state
 	//selected é um obj que possui os tipos selecionados
 	
@@ -78,18 +70,18 @@ function MenuLateral({selected, setSelected, data, setData, baseURL}) {
 	}
 
 	function DisplaySelected(e) {
-		selected[e.target.value] = e.target.checked;
-		let display = Object.values(selected).reduce( (rest, current) => rest || current )
-		const newData = state.filter( value => {
-			return seletionType(value,selected);
+		filtro[e.target.value] = e.target.checked;
+		let displayPokemon = Object.values(filtro).reduce( (rest, current) => rest || current )
+		const newDisplay = data.filter( value => {
+			return seletionType(value,filtro);
 		}).filter( value =>{
-			return seletionPrice(value,selected);
+			return seletionPrice(value,filtro);
 		})
 
-		if (display){
-			setData(newData);	
+		if (displayPokemon){
+			setDisplay(newDisplay);	
 		} else {
-			setData(state);
+			setDisplay(data);
 		}
 	}
 

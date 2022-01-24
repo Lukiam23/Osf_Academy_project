@@ -6,7 +6,8 @@ import MenuLateral from './MenuLateral'
 import React from "react";
 import styles from '../css/App.module.css';
 
-
+//react router
+//react context api
 const baseURL = 'https://my-json-server.typicode.com/Lukiam23/Osf_Academy_project/cards';
 
 function App() {
@@ -15,13 +16,15 @@ function App() {
   //useState permite ter variáveis state em componentes que são função
   // state => estado inicial
   // setDisplay => função para mudar o estado inicial
+  const [pokemonList, setPokemonList] = React.useState(null);
   const [display, setDisplay] = React.useState(null);
-  const [selected, setSelected] = React.useState(null);
+  const [filtro, setFiltro] = React.useState(null);
 
   React.useEffect(() => {
     axios.get(baseURL)
     .then((res) => {
       setDisplay(res.data);
+      setPokemonList(res.data);
     });
   }, []);
 
@@ -34,8 +37,8 @@ function App() {
         <title>RocketMarket</title>
       </Helmet>
       
-      <MenuLateral selected = {selected} setSelected = {setSelected} data={display} setData={setDisplay} baseURL={baseURL}/>
-      <Header baseURL={baseURL}/>
+      <MenuLateral filtro = {filtro} setFiltro = {setFiltro} data={pokemonList} display={display} setDisplay = {setDisplay}/>
+      <Header data={pokemonList}/>
       
       <div className={styles.cardContainer}>  
         {display.map( obj => {

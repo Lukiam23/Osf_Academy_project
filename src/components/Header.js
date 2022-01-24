@@ -4,18 +4,10 @@ import React, { useEffect } from "react";
 
 
 
-function Header({baseURL}) {
-	const [data, setData] = React.useState(null);
+function Header({data}) {
 	const [show, setShow] = React.useState(null);
 	const [found, setFound] = React.useState(null);
 	const filterFunction = (nome, searchWord) => { return nome.includes(searchWord)}
-
-	useEffect(() => {
-		axios.get(baseURL)
-		.then((res) => {
-	    	setData(res.data);
-	    });
-	}, [show]);
 
 	const options = () =>{
 		let divInput = document.getElementById('headerSearchInput');
@@ -42,7 +34,7 @@ function Header({baseURL}) {
 
 	const visibleBox = {
 		"height": "140px",
-		"width": "80%",
+		"width": "75%",
 
 	};
 
@@ -54,7 +46,10 @@ function Header({baseURL}) {
 		
 		<div className={styles.headerContainer}>
 			<input type="checkbox" id={styles.check}/>
-			<h1>Rocket<span>Market</span></h1>
+			<div className={styles.webTitle}>RocketMarket</div>
+			<div className={styles.carButton}>
+				<span><i class="fas fa-cart-plus"></i></span>
+			</div>
 			<div className={styles.searchBox}>
 				<div id="box" className={styles.inputBox} style={ show ? visibleBox : {}}>
 					<input type="text" id="headerSearchInput" onChange={options} placeholder="Insira um pokémon" className={styles.headerSearchInput}/>
@@ -67,8 +62,6 @@ function Header({baseURL}) {
 						<i class="fas fa-search"></i>
 					</label>
 				</a>
-				
-
 			</div>
 			
 		</div>
