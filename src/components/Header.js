@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 
 
 
+
 function Header({data}) {
 	const [show, setShow] = React.useState(null);
 	const [found, setFound] = React.useState(null);
@@ -41,6 +42,7 @@ function Header({data}) {
 	const visibleOptions = {
 		"visibility": "visible",
 	};
+
 
 	return (
 		

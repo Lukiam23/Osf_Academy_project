@@ -1,10 +1,20 @@
 import styles from '../css/Card.module.css'
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import {CarContext} from './App'
 
 function Card({nome, tipo, preco, img, alt}) {
+	const {carList, pokemonList ,setCarList} = useContext(CarContext);
 	const [checked, setChecked] = React.useState(null);
 	const putOnCar = (e) => {
-		setChecked(!checked)
+		const temp = carList;
+		const nomePokemon = e.currentTarget.getAttribute('value');
+		const pokemon = pokemonList.filter( value => value.nome === nomePokemon)
+		if (pokemon.length > 0){
+			temp.push(pokemon[0]);
+			setCarList(temp)
+			setChecked(!checked)
+		} 
+		console.log(carList)
 	}
 
 	const buttonColor = {
@@ -13,7 +23,7 @@ function Card({nome, tipo, preco, img, alt}) {
 
 	return (
 
-	<div className={styles.cardContainers} onClick={putOnCar}>
+	<div className={styles.cardContainers} onClick={putOnCar} value={nome}>
 		<img src={img} alt={alt} />
 
 		<div className={styles.nomePreco}>
