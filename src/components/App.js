@@ -5,8 +5,8 @@ import Header from './Header'
 import MenuLateral from './MenuLateral'
 import React, { useState } from "react";
 import styles from '../css/App.module.css';
+import AppContextProvider from './AppContextProvider'
 
-export const CarContext = React.createContext();
 
 const baseURL = 'https://my-json-server.typicode.com/Lukiam23/Osf_Academy_project/cards';
 
@@ -15,7 +15,6 @@ function App() {
   //useState permite ter variáveis state em componentes que são função
   // state => estado inicial
   // setDisplay => função para mudar o estado inicial
-  const [carList, setCarList] = useState([]);
   const [pokemonList, setPokemonList] = useState(null);
   const [display, setDisplay] = useState(null);
   const [filtro, setFiltro] = useState(null);
@@ -31,7 +30,7 @@ function App() {
   if (!display) return null;
 
   return (
-    <CarContext.Provider value={{carList, pokemonList,setCarList}}>
+    <AppContextProvider>
       <div className={styles.App}>
         <Helmet>
           <script src="https://kit.fontawesome.com/3475a922f1.js" crossorigin="anonymous"></script>
@@ -44,12 +43,12 @@ function App() {
         <div className={styles.cardContainer}>  
           {display.map( obj => {
             return (
-              <Card nome={obj.nome} tipo={obj.tipo} preco={'R$ '+obj.preco} img={obj.img} alt={obj.alt}/>
+              <Card pokemon={obj}/>
             );})}
         </div>
 
       </div>
-    </CarContext.Provider>
+    </AppContextProvider>
   );
 }
 
