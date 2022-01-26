@@ -73,21 +73,24 @@
 
 .carButton{
 	position: absolute;
-	right: 10px;
-	margin-top: 10px;
+	right: 20px;
+	margin-top: 12px;
 	margin-bottom: 10px;
 	width: 40px;
 	height: 40px;
-	border-radius: 50%;	
+	border: none;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	cursor: pointer;
 	color: #ecf0f1 ;
-	background: #3498db;
+	background: none;
 	font-size: 30px;
+	cursor: pointer;
+	z-index: 2;
 
 }
+
+
 
 #check:checked ~ .searchBox .headerSearchInput{
 	width: 100%;
@@ -194,7 +197,7 @@
 	.searchButton{
 		background: #ecf0f1;
 		color: #3498db;
-		right: 10px;
+		right: 20px;
 		margin-left: 2px;
 	}
 
@@ -237,14 +240,14 @@
 
 	.carButton{
 		position: absolute;
-		right: 20px;
+		right: 35px;
 		top: 5px;
 		margin-top: 10px;
 		margin-bottom: 10px;
 		color: #ecf0f1 ;
 		width: 40px;
 		height: 40px;
-		border-radius: 50%;
+		border: none;
 		background: #3498db;
 		display: flex;
 		justify-content: center;
@@ -252,4 +255,14 @@
 		font-size: 30px;
 
 	}
+}
+
+@media screen and (max-width:  413px){
+	.carButton{
+			right: 25px;
+		}
+
+		.searchButton{
+			right: 10px;
+		}
 }

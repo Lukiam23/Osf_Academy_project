@@ -1,6 +1,7 @@
 import axios from 'axios'
 import styles from '../css/Header.module.css'
 import React, { useEffect } from "react";
+import {BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
 
 
 
@@ -47,11 +48,21 @@ function Header({data}) {
 	return (
 		
 		<div className={styles.headerContainer}>
+			<Router>
+				<Link to='car'>
+					<button className={styles.carButton}>
+						<span><i class="fas fa-cart-plus"></i></span>
+					</button>
+				</Link>
+
+				<Link to='/'>
+					<div className={styles.webTitle}>RocketMarket</div>
+				</Link>
+			</Router>
+
 			<input type="checkbox" id={styles.check}/>
-			<div className={styles.webTitle}>RocketMarket</div>
-			<div className={styles.carButton}>
-				<span><i class="fas fa-cart-plus"></i></span>
-			</div>
+			
+			
 			<div className={styles.searchBox}>
 				<div id="box" className={styles.inputBox} style={ show ? visibleBox : {}}>
 					<input type="text" id="headerSearchInput" onChange={options} placeholder="Insira um pokémon" className={styles.headerSearchInput}/>
