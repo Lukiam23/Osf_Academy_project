@@ -1,8 +1,12 @@
-
+import {useAppContext} from '../components/AppContextProvider'
+import styles from '../css/CarPage.module.css'
 
 function CarPage({texto}) {
+	const {carList, setCarList} = useAppContext();
 	return (
-		<h1>{texto}</h1>
+		<div className={styles.carContainer}>  
+          {carList.map(pokemon => {return(<p>{pokemon.nome}</p>)})}
+        </div>
 
 	);
 }

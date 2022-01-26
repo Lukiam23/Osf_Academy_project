@@ -6,9 +6,10 @@ import MenuLateral from './MenuLateral'
 import React, { useState } from "react";
 import styles from '../css/App.module.css';
 import AppContextProvider from './AppContextProvider'
-import {BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom'
 
 import CarPage from '../pages/CarPage'
+import HomePage from '../pages/HomePage'
 
 
 const baseURL = 'https://my-json-server.typicode.com/Lukiam23/Osf_Academy_project/cards';
@@ -34,30 +35,25 @@ function App() {
 
   return (
     <AppContextProvider>
-      <Router>
-        <Routes>
-          <Route path='car' element={<CarPage />}/>
-        </Routes>
-      </Router>
+    <Router>
       <div className={styles.App}>
         <Helmet>
           <script src="https://kit.fontawesome.com/3475a922f1.js" crossorigin="anonymous"></script>
           <title>RocketMarket</title>
         </Helmet>
+
+        <Header data={pokemonList} display={display}/>
         
         <MenuLateral filtro = {filtro} setFiltro = {setFiltro} data={pokemonList} display={display} setDisplay = {setDisplay}/>
-        <Header data={pokemonList}/>
-        
-          <div className={styles.cardContainer}>  
-            {display.map( obj => {
-              return (
-                <Card pokemon={obj}/>
-              );})}
-
-          </div>
-
       </div>
+      <Routes>
+        <Route exact path='/' element={<HomePage display={display}/>}/>
+        <Route path='car' element={<CarPage />}/>
+        <Route />
+      </Routes>
+    </Router>
     </AppContextProvider>
+
   );
 }
 

@@ -1,9 +1,16 @@
 import App from '../components/App';
-import {BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
-import CarPage from './CarPage';
+import styles from '../css/HomePage.module.css';
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Card from '../components/Card'
 
-function HomePage() {
+function HomePage({display}) {
 	return (
+		<div className={styles.cardContainer}>  
+      {display.map( obj => {
+        return (
+          <Card pokemon={obj}/>
+        );})}
+    </div>
 		
 	);
 }

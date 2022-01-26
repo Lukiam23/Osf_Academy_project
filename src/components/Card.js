@@ -26,7 +26,7 @@ function Card({pokemon}) {
 
 		<div className={styles.nomePreco}>
 			<label>{nome}</label>
-			<label>{preco}</label>
+			<label>R$ {preco}</label>
 		</div>
 
 		<div className={styles.descricao}>

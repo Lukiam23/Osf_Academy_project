@@ -1,12 +1,9 @@
 import axios from 'axios'
 import styles from '../css/Header.module.css'
 import React, { useEffect } from "react";
-import {BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes, Link, Outlet } from 'react-router-dom'
 
-
-
-
-function Header({data}) {
+function Header({data, display}) {
 	const [show, setShow] = React.useState(null);
 	const [found, setFound] = React.useState(null);
 	const filterFunction = (nome, searchWord) => { return nome.includes(searchWord)}
@@ -48,7 +45,7 @@ function Header({data}) {
 	return (
 		
 		<div className={styles.headerContainer}>
-			<Router>
+			
 				<Link to='car'>
 					<button className={styles.carButton}>
 						<span><i class="fas fa-cart-plus"></i></span>
@@ -58,7 +55,8 @@ function Header({data}) {
 				<Link to='/'>
 					<div className={styles.webTitle}>RocketMarket</div>
 				</Link>
-			</Router>
+
+				<Outlet />
 
 			<input type="checkbox" id={styles.check}/>
 			
