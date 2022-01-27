@@ -6,24 +6,17 @@
 	height: 70px;
 	background: white;
 	margin-bottom: 15px;
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
 	box-sizing: border-box;
 	border-radius: 10px;
 	box-shadow: 0px 4px 8px 0px rgba(1,0,0,.8);
+	padding: 10px 10px 0 30px ;
 }
 
-.carItem span{
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	font-size: 25px;
-	cursor: pointer;
-	color: #b71540;
-}
 
 .carItem img{
-	margin-top: 10px;
-	margin-left: 40px;
+	position: relative;
 	width: 50px;
 	height: 50px;
 	border-radius: 10px;
@@ -32,27 +25,67 @@
 
 .nome{
 	font-size: 20px;
-	margin-left: 50px;
-	padding-top: 20px;
+	margin-left: 20px;
 	padding-bottom: 15px;
 	font-family: Montserrat, sans-serif;
+}
+
+.deleteButton span{
+	position: relative;
+	font-size: 25px;
+	cursor: pointer;
+	color: #b71540;
+}
+
+.plusButton span{
+	position: relative;
+	font-size: 25px;
+	cursor: pointer;
+	color: #b71540;
+}
+
+.minusButton span{
+	position: relative;
+	font-size: 25px;
+	cursor: pointer;
+	color: #b71540;
+}
+
+.quantidade{
+	padding-top: 10px;
 }
 
 @media screen and (max-width:  480px){
-  .carItem img{
-	margin-top: 10px;
-	margin-left: 10px;
-	width: 50px;
-	height: 50px;
-	border-radius: 10px;
-	box-shadow: 0px 4px 8px 0px rgba(1,0,0,.1);
-  }
+	.carItem img{
+		display: none;
+	}
 
-  .nome{
-	font-size: 20px;
-	margin-left: 20px;
-	padding-top: 20px;
-	padding-bottom: 15px;
-	font-family: Montserrat, sans-serif;
-  }
+	.deleteButton span{
+		position: absolute;
+		right: 15px;
+		font-size: 18px;
+	}
+
+	.plusButton span{
+		font-size: 18px;
+	}
+
+	.minusButton span{
+		font-size: 18px;
+	}
+
+	.carItem{
+		padding: 20px 10px 10px 0px ;
+		margin-bottom: 10px;
+	}
+
+	.nome{
+		font-size: 20px;
+		margin-left: 10px;
+		padding-bottom: 15px;
+		padding-top: 0;
+		font-family: Montserrat, sans-serif;
+	}
 }
+
+
