@@ -4,14 +4,12 @@ import { useState } from "react";
 export default function CarItem({pokemon, deleteItem}){
 	const [quantidade,setQuantidade] = useState(1);
 	const deleteItemCar = () => deleteItem(pokemon);
-	const addItemCar = () => {if(pokemon.qt < quantidade){setQuantidade(quantidade + 1)}};
+	const addItemCar = () => {if(quantidade < pokemon.qt){setQuantidade(quantidade + 1)}};
 	const removeItemCar = () => {if(quantidade > 1){setQuantidade(quantidade - 1)}};
 
 	const limitColor ={
 		'color': 'grey'
 	} 
-
-
 
 	return (
 		<div className={styles.carItem}>
