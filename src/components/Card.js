@@ -11,6 +11,7 @@ function Card({pokemon}) {
 		if(checked){
 			setCarList(carList.filter(value => value.nome !== nome))
 		} else {
+			pokemon['carQt'] = 1;
 			setCarList([...carList, pokemon])
 		}
 	}
