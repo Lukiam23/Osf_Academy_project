@@ -2,6 +2,7 @@ import axios from 'axios'
 import styles from '../css/MenuLateral.module.css'
 import CheckBox from './CheckBox'
 import React, { useEffect } from "react";
+import {Link} from 'react-router-dom'
 
 function MenuLateral({filtro, setFiltro, data, display, setDisplay}) {
 	const [state, setState] = React.useState(null);
@@ -97,6 +98,7 @@ function MenuLateral({filtro, setFiltro, data, display, setDisplay}) {
 			<div className={styles.selectAble}>
 				<header>Menu</header>
 				<nav>
+					<Link to='/'>Home</Link>
 					<a href="#" onClick={setType}>
 						<span>Tipo</span>
 					</a>

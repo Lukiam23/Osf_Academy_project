@@ -7,7 +7,6 @@ export default function CarItem({pokemon, deleteItem}){
 			<img src={pokemon.img} alt={pokemon.alt} />
 			<div className={styles.nome}>{pokemon.nome}</div>
 			<span onClick={deleteItemCar}><i class="fas fa-trash-alt"></i></span>
-			
 		</div>
 	);
 }

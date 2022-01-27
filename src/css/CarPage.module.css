@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600');
+
 .carContainer{
   display: grid;
   position: absolute;
@@ -5,4 +7,27 @@
   top: 20px;
   left: 310px;
   width: 75%; 
+  padding: 0 20px 0 0px;
+  text-align: center;
+  font-family: Montserrat, sans-serif ;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width:  480px){
+  .carContainer{
+    width: 100%; 
+    padding: 0px 0px; 
+  }
+}
+
+@media screen and (max-width:  818px){
+  .carContainer{
+    box-sizing: border-box;
+    top: 90px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 20px; 
+    margin: 0 auto;
+  }
 }
