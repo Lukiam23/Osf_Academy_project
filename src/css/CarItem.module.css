@@ -7,7 +7,7 @@
 	background: white;
 	margin-bottom: 15px;
 	display: grid;
-	grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 2fr 2fr 1fr 1fr 1fr 1fr;
 	box-sizing: border-box;
 	border-radius: 10px;
 	box-shadow: 0px 4px 8px 0px rgba(1,0,0,.8);
@@ -23,11 +23,13 @@
 	box-shadow: 0px 4px 8px 0px rgba(1,0,0,.1);
 }
 
-.nome{
+
+.nome, .preco{
 	font-size: 20px;
 	margin-left: 20px;
 	padding-bottom: 15px;
 	font-family: Montserrat, sans-serif;
+	padding-top: 10px;
 }
 
 .deleteButton span{
@@ -55,9 +57,14 @@
 	padding-top: 10px;
 }
 
-@media screen and (max-width:  480px){
+@media screen and (max-width:  590px){
 	.carItem img{
 		display: none;
+	}
+
+	.quantidade{
+		padding-top: 0 ;
+		text-align: left;
 	}
 
 	.deleteButton span{
@@ -76,10 +83,11 @@
 
 	.carItem{
 		padding: 20px 10px 10px 0px ;
+		grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
 		margin-bottom: 10px;
 	}
 
-	.nome{
+	.nome, .preco{
 		font-size: 20px;
 		margin-left: 10px;
 		padding-bottom: 15px;

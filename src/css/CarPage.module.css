@@ -8,10 +8,39 @@
   left: 310px;
   width: 75%; 
   padding: 0 20px 0 0px;
-  text-align: center;
+  text-align: right;
   font-family: Montserrat, sans-serif ;
   box-sizing: border-box;
 }
+
+.emptyCar{
+
+  display: block;
+  position: absolute;
+  grid-template-columns:  1fr;
+  top: 20px;
+  left: 310px;
+  width: 75%; 
+  padding: 0 20px 0 0px;
+  text-align: center;
+  font-family: Montserrat, sans-serif ;
+  box-sizing: border-box;
+
+}
+
+@media screen and (min-width:  1564px){
+  .carContainer{
+    left: 370px;
+  }
+}
+
+@media screen and (min-width:  1706px){
+  .carContainer{
+    left: 410px;
+  }
+}
+
+
 
 @media screen and (max-width:  480px){
   .carContainer{
