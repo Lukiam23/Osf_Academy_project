@@ -1,22 +1,20 @@
 import styles from '../css/CarItem.module.css';
 import { useState, useEffect } from "react";
 
-export default function CarItem({pokemon, deleteItem, setRenderPage, renderPage}){	
+export default function CarItem({pokemon, deleteItem, setPokemonCount}){	
 	const deleteItemCar = () => {
-		deleteItem(pokemon)
+		deleteItem()
 	};
 
 	const addItemCar = () => {
 		if(pokemon.carQt < pokemon.qt){
-			pokemon.carQt++;
-			setRenderPage(!renderPage)
+			setPokemonCount(pokemon.carQt + 1)
 		}
 	};
 
 	const removeItemCar = () => {
 		if(pokemon.carQt > 1){
-			pokemon.carQt--;
-			setRenderPage(!renderPage)
+			setPokemonCount(pokemon.carQt - 1)
 		}
 	};
 

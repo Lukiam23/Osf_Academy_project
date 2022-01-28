@@ -6,8 +6,16 @@ import { useState, useEffect } from "react";
 
 function CarPage({texto}) {
 	const {carList, setCarList} = useAppContext();
-	
-	const [renderPage,setRenderPage] = useState(true);
+
+	const setPokemonCount = (pokemon, count) => {
+		setCarList(carList.map(pk => {
+			if(pk.nome === pokemon.nome){
+				return {...pokemon, carQt:count};
+			}
+
+			return pk;
+		}));
+	};	
 	
 	const deleteItem = (pokemon) => {
 		setCarList(carList.filter(item => item.nome !== pokemon.nome));
@@ -32,7 +40,7 @@ function CarPage({texto}) {
 		  },0)} 
 		  </h1>
           {carList.map(pokemon => {
-          	return(<CarItem pokemon={pokemon} deleteItem={deleteItem} renderPage={renderPage} setRenderPage={setRenderPage}/>)
+          	return(<CarItem pokemon={pokemon} deleteItem={() => deleteItem(pokemon)} setPokemonCount={(count) => setPokemonCount(pokemon,count)}/>)
           })}
 
          <button className={styles.endShop} onClick={shop}>Finalizar Compra</button> 
