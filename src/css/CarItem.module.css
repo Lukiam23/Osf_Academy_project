@@ -54,6 +54,7 @@
 }
 
 .quantidade{
+	position: relative;
 	padding-top: 10px;
 }
 
@@ -64,12 +65,9 @@
 
 	.quantidade{
 		padding-top: 0 ;
-		text-align: left;
 	}
 
 	.deleteButton span{
-		position: absolute;
-		right: 15px;
 		font-size: 18px;
 	}
 
@@ -83,17 +81,26 @@
 
 	.carItem{
 		padding: 20px 10px 10px 0px ;
-		grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+		grid-template-columns: 2fr 2fr 0.5fr 0.5fr 0.5fr 1fr;
 		margin-bottom: 10px;
 	}
 
 	.nome, .preco{
-		font-size: 20px;
+		font-size: 18px;
+		text-align: left;
 		margin-left: 10px;
 		padding-bottom: 15px;
 		padding-top: 0;
 		font-family: Montserrat, sans-serif;
 	}
+}
+
+@media screen and (max-width:  446px){
+
+	.nome, .preco{
+		font-size: 14px;
+	}
+
 }
 
 
