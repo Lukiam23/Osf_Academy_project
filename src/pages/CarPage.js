@@ -7,17 +7,14 @@ import { useState, useEffect } from "react";
 function CarPage({texto}) {
 	const {carList, setCarList} = useAppContext();
 	
-	const [updateFlag,setUpdateFlag] = useState(true);
-	
-	const [total,setTotal] = useState();
+	const [renderPage,setRenderPage] = useState(true);
 	
 	const deleteItem = (pokemon) => {
 		setCarList(carList.filter(item => item.nome !== pokemon.nome));
 	};	
 
-	useEffect(() => {
-		setTotal(carList.reduce((acumulador, pokemon) => {return acumulador + (pokemon.preco *pokemon.carQt)},0))
-	},[carList,updateFlag])
+	const shop = () => {console.log("End Shop")}
+	
 
 	if (carList.length === 0){
 		return(
@@ -35,8 +32,10 @@ function CarPage({texto}) {
 		  },0)} 
 		  </h1>
           {carList.map(pokemon => {
-          	return(<CarItem pokemon={pokemon} setUpdateFlag={setUpdateFlag} updateFlag={updateFlag} deleteItem={deleteItem} setTotal={setTotal}/>)
+          	return(<CarItem pokemon={pokemon} deleteItem={deleteItem} renderPage={renderPage} setRenderPage={setRenderPage}/>)
           })}
+
+         <button className={styles.endShop} onClick={shop}>Finalizar Compra</button> 
         </div>
 	);
 }

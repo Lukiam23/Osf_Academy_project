@@ -1,7 +1,7 @@
 import styles from '../css/CarItem.module.css';
 import { useState, useEffect } from "react";
 
-export default function CarItem({pokemon, deleteItem, total, setTotal, setUpdateFlag, updateFlag}){	
+export default function CarItem({pokemon, deleteItem, setRenderPage, renderPage}){	
 	const deleteItemCar = () => {
 		deleteItem(pokemon)
 	};
@@ -9,14 +9,14 @@ export default function CarItem({pokemon, deleteItem, total, setTotal, setUpdate
 	const addItemCar = () => {
 		if(pokemon.carQt < pokemon.qt){
 			pokemon.carQt++;
-			setUpdateFlag(!updateFlag)
+			setRenderPage(!renderPage)
 		}
 	};
 
 	const removeItemCar = () => {
 		if(pokemon.carQt > 1){
 			pokemon.carQt--;
-			setUpdateFlag(!updateFlag)
+			setRenderPage(!renderPage)
 		}
 	};
 
