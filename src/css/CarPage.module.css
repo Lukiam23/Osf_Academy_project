@@ -4,6 +4,7 @@
   display: grid;
   position: absolute;
   grid-template-columns:  1fr;
+  display: block;
   top: 20px;
   left: 310px;
   width: 75%; 
@@ -84,5 +85,9 @@
     left: 0;
     padding-top: 100px;
     width: 100%;
+  }
+  .endShop{
+    display: block;
+    margin: 60px auto;
   }
 }

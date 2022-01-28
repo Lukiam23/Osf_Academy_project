@@ -2,6 +2,7 @@ import {useAppContext} from '../components/AppContextProvider'
 import CarItem from '../components/CarItem'
 import styles from '../css/CarPage.module.css'
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'
 
 
 function CarPage({texto}) {
@@ -21,7 +22,9 @@ function CarPage({texto}) {
 		setCarList(carList.filter(item => item.nome !== pokemon.nome));
 	};	
 
-	const shop = () => {console.log("End Shop")}
+	const shop = () => {
+		setCarList([])
+	}
 	
 
 	if (carList.length === 0){
@@ -42,8 +45,9 @@ function CarPage({texto}) {
           {carList.map(pokemon => {
           	return(<CarItem pokemon={pokemon} deleteItem={() => deleteItem(pokemon)} setPokemonCount={(count) => setPokemonCount(pokemon,count)}/>)
           })}
-
-         <button className={styles.endShop} onClick={shop}>Finalizar Compra</button> 
+         <Link to='message'>
+         	<button className={styles.endShop} onClick={shop}>Finalizar Compra</button> 
+         </Link>
         </div>
 	);
 }

@@ -1,15 +1,16 @@
-import axios from 'axios'
-import Card from './Card'
+import axios from 'axios';
+import Card from './Card';
 import { Helmet } from 'react-helmet';
-import Header from './Header'
+import Header from './Header';
 import MenuLateral from './MenuLateral'
 import React, { useState } from "react";
 import styles from '../css/App.module.css';
-import AppContextProvider from './AppContextProvider'
-import {BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom'
+import AppContextProvider from './AppContextProvider';
+import {BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
 
-import CarPage from '../pages/CarPage'
-import HomePage from '../pages/HomePage'
+import CarPage from '../pages/CarPage';
+import HomePage from '../pages/HomePage';
+import MessagePage from '../pages/MessagePage';
 
 
 const baseURL = 'https://my-json-server.typicode.com/Lukiam23/Osf_Academy_project/cards';
@@ -49,6 +50,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<HomePage display={display}/>}/>
         <Route path='car' element={<CarPage />}/>
+        <Route path='car/message' element={<MessagePage />}/>
         <Route />
       </Routes>
     </Router>
