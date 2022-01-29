@@ -3,7 +3,7 @@ import Card from './Card';
 import { Helmet } from 'react-helmet';
 import Header from './Header';
 import MenuLateral from './MenuLateral'
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from '../css/App.module.css';
 import AppContextProvider from './AppContextProvider';
 import {BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
@@ -17,15 +17,11 @@ const baseURL = 'https://my-json-server.typicode.com/Lukiam23/Osf_Academy_projec
 const brazilianNumberFormatter = new Intl.NumberFormat("pt-BR")
 
 function App() {
-  // state é um objeto do JavaScrip usado pelo React para representar uma informação sobre a situação atual da componente 
-  //useState permite ter variáveis state em componentes que são função
-  // state => estado inicial
-  // setDisplay => função para mudar o estado inicial
   const [pokemonList, setPokemonList] = useState(null);
   const [display, setDisplay] = useState(null);
   const [filtro, setFiltro] = useState(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     axios.get(baseURL)
     .then((res) => {
       setDisplay(res.data);
