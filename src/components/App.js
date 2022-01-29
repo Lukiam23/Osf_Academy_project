@@ -14,6 +14,7 @@ import MessagePage from '../pages/MessagePage';
 
 
 const baseURL = 'https://my-json-server.typicode.com/Lukiam23/Osf_Academy_project/cards';
+const brazilianNumberFormatter = new Intl.NumberFormat("pt-BR")
 
 function App() {
   // state é um objeto do JavaScrip usado pelo React para representar uma informação sobre a situação atual da componente 

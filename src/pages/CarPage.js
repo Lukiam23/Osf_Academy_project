@@ -40,7 +40,7 @@ function CarPage({texto}) {
 		  <h1>
 		  Total: {carList.reduce((acumulador, pokemon) => {
 		  	return acumulador + (pokemon.preco *pokemon.carQt)
-		  },0)} 
+		  },0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} 
 		  </h1>
           {carList.map(pokemon => {
           	return(<CarItem pokemon={pokemon} deleteItem={() => deleteItem(pokemon)} setPokemonCount={(count) => setPokemonCount(pokemon,count)}/>)

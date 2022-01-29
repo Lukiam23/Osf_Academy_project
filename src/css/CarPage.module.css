@@ -4,7 +4,6 @@
   display: grid;
   position: absolute;
   grid-template-columns:  1fr;
-  display: block;
   top: 20px;
   left: 310px;
   width: 75%; 

@@ -27,7 +27,7 @@ function Card({pokemon}) {
 
 		<div className={styles.nomePreco}>
 			<label>{nome}</label>
-			<label>R$ {preco}</label>
+			<label>{preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</label>
 		</div>
 
 		<div className={styles.descricao}>

@@ -53,14 +53,6 @@ function MenuLateral({filtro, setFiltro, data, display, setDisplay}) {
 		return matchPrice
 	}
 
-	function setType(){
-		show("type");
-	}
-
-	function setPrice(){
-		show("price");
-	}
-
 	function show(id) {
 		let element = document.getElementById(id);
 		if(element.style.display === "block"){
@@ -99,7 +91,7 @@ function MenuLateral({filtro, setFiltro, data, display, setDisplay}) {
 				<header>Menu</header>
 				<nav>
 					<Link to='/'>Home</Link>
-					<a href="#" onClick={setType}>
+					<a href="#" onClick={() => {show("type")}}>
 						<span>Tipo</span>
 					</a>
 
@@ -123,7 +115,7 @@ function MenuLateral({filtro, setFiltro, data, display, setDisplay}) {
 						<CheckBox tipo='Psíquico' />		
 					</div>
 
-					<a href="#" onClick={setPrice}>
+					<a href="#" onClick={() => {show("price")}}>
 						<span>Preço</span>
 					</a>
 
