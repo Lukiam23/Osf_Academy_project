@@ -6,9 +6,11 @@ export default function MessagePage(){
 		<div className={styles.messageContainer}>
 			<div className={styles.messageBox}>
 				<h1>Compra concluída com sucesso.</h1>
-				<Link to='/'>
-					<button>Fechar</button>
-				</Link>
+				<button>
+					<Link to='/' className={styles.link}>
+						Fechar
+					</Link>
+				</button>
 			</div>
 		</div>
 

@@ -45,9 +45,11 @@ function CarPage({texto}) {
           {carList.map(pokemon => {
           	return(<CarItem pokemon={pokemon} deleteItem={() => deleteItem(pokemon)} setPokemonCount={(count) => setPokemonCount(pokemon,count)}/>)
           })}
-         <Link to='message'>
-         	<button className={styles.endShop} onClick={shop}>Finalizar Compra</button> 
-         </Link>
+          <button className={styles.endShop} onClick={shop}>
+	         <Link to='message' className={styles.link}>
+	         	Finalizar Compra
+	         </Link>
+         </button> 
         </div>
 	);
 }

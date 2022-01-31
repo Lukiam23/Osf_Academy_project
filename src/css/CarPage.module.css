@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600');
 
+.link{
+  color: white;
+}
 .carContainer{
   display: grid;
   position: absolute;
@@ -28,6 +31,10 @@
   background: #3498db;
   border: none;
   box-shadow: 2px 2px 5px 1px rgba(1,0,0,1);
+}
+
+.endShop:active{
+  transform: scale(0.95);
 }
 
 .emptyCar{

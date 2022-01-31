@@ -39,6 +39,11 @@
 	color: #b71540;
 }
 
+.deleteButton:active, .plusButton:active, .minusButton:active{
+	transform: scale(0.96);
+}
+
+
 .plusButton span{
 	position: relative;
 	font-size: 25px;
