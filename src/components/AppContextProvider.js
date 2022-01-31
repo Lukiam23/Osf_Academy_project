@@ -4,11 +4,21 @@ const Context = React.createContext();
 
 export default function AppContextProvider({children}){
 	const [carList, setCarList] = useState([]);
+	const [saldo, setSaldo] = useState(500000);
 
 	useEffect(() => {
     	let car = sessionStorage.getItem("carList");
+    	
     	if(car !== null){
     		setCarList(JSON.parse(car))
+    	}
+ 	},[]);
+
+ 	useEffect(() => {
+    	let temSaldo = sessionStorage.getItem("Saldo");
+
+    	if(temSaldo !== null){
+    		setSaldo(JSON.parse(temSaldo))
     	}
  	},[]);
 
@@ -16,8 +26,12 @@ export default function AppContextProvider({children}){
     	sessionStorage.setItem("carList", JSON.stringify(carList));
  	},[carList]);
 
+ 	useEffect(() => {
+    	sessionStorage.setItem("Saldo", JSON.stringify(saldo));
+ 	},[saldo]);
+
 	return (
-		<Context.Provider value = {{carList,setCarList}}>
+		<Context.Provider value = {{carList, setCarList, saldo, setSaldo}}>
 			{children}
 		</Context.Provider>
 	);

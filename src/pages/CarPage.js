@@ -2,11 +2,12 @@ import {useAppContext} from '../components/AppContextProvider'
 import CarItem from '../components/CarItem'
 import styles from '../css/CarPage.module.css'
 import { useState, useEffect } from "react";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate   } from 'react-router-dom'
 
 
 function CarPage({texto}) {
-	const {carList, setCarList} = useAppContext();
+	const {carList, setCarList, saldo, setSaldo} = useAppContext();
+	let navigate = useNavigate();
 
 	const setPokemonCount = (pokemon, count) => {
 		setCarList(carList.map(pk => {
@@ -23,7 +24,11 @@ function CarPage({texto}) {
 	};	
 
 	const shop = () => {
+		const total = carList.reduce((acumulador, pokemon) => {	return acumulador + (pokemon.preco *pokemon.carQt)},0)
+		setSaldo(saldo - total)
 		setCarList([])
+		navigate('message')
+	
 	}
 	
 
@@ -45,11 +50,11 @@ function CarPage({texto}) {
           {carList.map(pokemon => {
           	return(<CarItem pokemon={pokemon} deleteItem={() => deleteItem(pokemon)} setPokemonCount={(count) => setPokemonCount(pokemon,count)}/>)
           })}
-          <button className={styles.endShop} onClick={shop}>
-	         <Link to='message' className={styles.link}>
-	         	Finalizar Compra
-	         </Link>
+		  
+         <button className={styles.endShop} onClick={shop}>
+	     	Finalizar Compra
          </button> 
+
         </div>
 	);
 }

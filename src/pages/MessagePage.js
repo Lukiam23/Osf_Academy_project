@@ -1,15 +1,15 @@
 import styles from '../css/MessagePage.module.css';
-import {Link } from 'react-router-dom';
+import { Link, useNavigate   } from 'react-router-dom'
 
 export default function MessagePage(){
+	let navigate = useNavigate();
+
 	return(
 		<div className={styles.messageContainer}>
 			<div className={styles.messageBox}>
 				<h1>Compra concluída com sucesso.</h1>
-				<button>
-					<Link to='/' className={styles.link}>
-						Fechar
-					</Link>
+				<button onClick={() => navigate('/')}>
+					Fechar
 				</button>
 			</div>
 		</div>

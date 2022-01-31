@@ -3,8 +3,10 @@ import styles from '../css/MenuLateral.module.css'
 import CheckBox from './CheckBox'
 import React, { useEffect } from "react";
 import {Link} from 'react-router-dom'
+import {useAppContext} from './AppContextProvider'
 
 function MenuLateral({filtro, setFiltro, data, display, setDisplay}) {
+	const {saldo, setSaldo} = useAppContext();
 	const [state, setState] = React.useState(null);
 
 	useEffect(() => {setFiltro({})},[]);
@@ -136,6 +138,15 @@ function MenuLateral({filtro, setFiltro, data, display, setDisplay}) {
 						<CheckBox tipo='R$ 19000 - R$ 20000' />
 						<CheckBox tipo='R$ 20000 - R$ 21000' />
 						
+					</div>
+
+
+					<a href="#" onClick={() => {show("saldo")}}>
+						<span>Saldo</span>
+					</a>
+
+					<div id="saldo" className={styles.checkbox}>
+						{saldo.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}				
 					</div>
 
 				</nav>

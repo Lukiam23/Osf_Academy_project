@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600');
 
-.link{
-  color: white;
-}
+
 .carContainer{
   display: grid;
   position: absolute;

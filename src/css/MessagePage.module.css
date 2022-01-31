@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:600');
 
-.link{
-	color: white;
-}
 .messageContainer{
 	position: fixed;
 	background: rgba(0, 0, 0, .2);

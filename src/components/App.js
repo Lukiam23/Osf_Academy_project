@@ -35,11 +35,6 @@ function App() {
     <AppContextProvider>
     <Router>
       <div className={styles.App}>
-        <Helmet>
-          <script src="https://kit.fontawesome.com/3475a922f1.js" crossorigin="anonymous"></script>
-          <title>RocketMarket</title>
-        </Helmet>
-
         <Header data={pokemonList} display={display}/>
         
         <MenuLateral filtro = {filtro} setFiltro = {setFiltro} data={pokemonList} display={display} setDisplay = {setDisplay}/>
