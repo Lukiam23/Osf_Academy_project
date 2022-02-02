@@ -20,6 +20,7 @@ function App() {
   const [pokemonList, setPokemonList] = useState(null);
   const [display, setDisplay] = useState(null);
   const [filtro, setFiltro] = useState(null);
+  const [message, setMessage] = useState('')
 
   useEffect(() => {
     axios.get(baseURL)
@@ -35,14 +36,14 @@ function App() {
     <AppContextProvider>
     <Router>
       <div className={styles.App}>
-        <Header data={pokemonList} display={display}/>
+        <Header data={pokemonList} display={display} setDisplay={setDisplay}/>
         
         <MenuLateral filtro = {filtro} setFiltro = {setFiltro} data={pokemonList} display={display} setDisplay = {setDisplay}/>
       </div>
       <Routes>
         <Route exact path='/' element={<HomePage display={display}/>}/>
-        <Route path='car' element={<CarPage />}/>
-        <Route path='car/message' element={<MessagePage />}/>
+        <Route path='car' element={<CarPage message={message} setMessage={setMessage} />}/>
+        <Route path='car/message' element={<MessagePage message={message}/>}/>
         <Route />
       </Routes>
     </Router>

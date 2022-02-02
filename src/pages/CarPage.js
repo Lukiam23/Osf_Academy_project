@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate   } from 'react-router-dom'
 
 
-function CarPage({texto}) {
+function CarPage({ message, setMessage}) {
 	const {carList, setCarList, saldo, setSaldo} = useAppContext();
 	let navigate = useNavigate();
 
@@ -25,10 +25,16 @@ function CarPage({texto}) {
 
 	const shop = () => {
 		const total = carList.reduce((acumulador, pokemon) => {	return acumulador + (pokemon.preco *pokemon.carQt)},0)
-		setSaldo(saldo - total)
-		setCarList([])
-		navigate('message')
-	
+		const resto = saldo - total;
+		if(resto >= 0){
+			setSaldo(resto)
+			setCarList([])
+			navigate('message')
+			setMessage("Compra concluída com sucesso.");
+		} else {
+			setMessage("Saldo insuficiente");
+			navigate('message')
+		}
 	}
 	
 

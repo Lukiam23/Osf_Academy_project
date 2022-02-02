@@ -3,10 +3,20 @@ import styles from '../css/Header.module.css'
 import React, { useEffect } from "react";
 import {BrowserRouter as Router, Route, Routes, Link, Outlet } from 'react-router-dom'
 
-function Header({data, display}) {
+function Header({data, display, setDisplay}) {
 	const [show, setShow] = React.useState(null);
 	const [found, setFound] = React.useState(null);
 	const filterFunction = (nome, searchWord) => { return nome.includes(searchWord)}
+
+	const transferWord = (nome) => {
+		let divInput = document.getElementById('headerSearchInput');
+		let searchWord = '';
+		const newFilter = data.filter((value) => {
+			return filterFunction(value.nome.toLowerCase(),nome.toLowerCase())
+		});
+		setDisplay(newFilter)
+		setShow(false)
+	}
 
 	const options = () =>{
 		let divInput = document.getElementById('headerSearchInput');
@@ -22,13 +32,21 @@ function Header({data, display}) {
 		});
 		
 		setFound(newFilter.map((value,key) => {
-			return <div className={styles.dataItem}><a href={value.nome}><p>{value.nome}</p></a></div>
+			return <div className={styles.dataItem} onClick={() => transferWord(value.nome)}><p>{value.nome}</p></div>
 		}));	
 	}
 
 	const searchName = () =>{
 		let divInput = document.getElementById('headerSearchInput');
+		let searchWord = divInput.value;
+		divInput.value = ''
+
+		const newFilter = data.filter((value) => {
+			return filterFunction(value.nome.toLowerCase(),searchWord.toLowerCase())
+		});
+
 		setShow(false)
+		setDisplay(newFilter)
 	}
 
 	const visibleBox = {
