@@ -4,28 +4,26 @@ import React, { useEffect } from "react";
 import {BrowserRouter as Router, Route, Routes, Link, Outlet } from 'react-router-dom'
 
 function Header({data, display, setDisplay}) {
-	const [show, setShow] = React.useState(null);
 	const [found, setFound] = React.useState(null);
 	const filterFunction = (nome, searchWord) => { return nome.includes(searchWord)}
+	const divInput = document.getElementById('headerSearchInput');
+	let show = false;
+
+	if(divInput){
+		show = document.getElementById('headerSearchInput').value !== '';
+	} 
 
 	const transferWord = (nome) => {
 		let divInput = document.getElementById('headerSearchInput');
-		let searchWord = '';
 		const newFilter = data.filter((value) => {
 			return filterFunction(value.nome.toLowerCase(),nome.toLowerCase())
 		});
 		setDisplay(newFilter)
-		setShow(false)
 	}
 
 	const options = () =>{
 		let divInput = document.getElementById('headerSearchInput');
-		let searchWord = divInput.value;
-		if(searchWord){
-			setShow(true);
-		} else {
-			setShow(false)
-		}		
+		let searchWord = divInput.value;	
 
 		const newFilter = data.filter((value) => {
 			return filterFunction(value.nome.toLowerCase(),searchWord.toLowerCase())
@@ -45,7 +43,6 @@ function Header({data, display, setDisplay}) {
 			return filterFunction(value.nome.toLowerCase(),searchWord.toLowerCase())
 		});
 
-		setShow(false)
 		setDisplay(newFilter)
 	}
 
