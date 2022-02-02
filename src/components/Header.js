@@ -14,7 +14,6 @@ function Header({data, display, setDisplay}) {
 	} 
 
 	const transferWord = (nome) => {
-		let divInput = document.getElementById('headerSearchInput');
 		const newFilter = data.filter((value) => {
 			return filterFunction(value.nome.toLowerCase(),nome.toLowerCase())
 		});
@@ -22,7 +21,6 @@ function Header({data, display, setDisplay}) {
 	}
 
 	const options = () =>{
-		let divInput = document.getElementById('headerSearchInput');
 		let searchWord = divInput.value;	
 
 		const newFilter = data.filter((value) => {
@@ -35,15 +33,16 @@ function Header({data, display, setDisplay}) {
 	}
 
 	const searchName = () =>{
-		let divInput = document.getElementById('headerSearchInput');
-		let searchWord = divInput.value;
-		divInput.value = ''
+		if(show){
+			let searchWord = divInput.value;
+			divInput.value = ''
 
-		const newFilter = data.filter((value) => {
-			return filterFunction(value.nome.toLowerCase(),searchWord.toLowerCase())
-		});
+			const newFilter = data.filter((value) => {
+				return filterFunction(value.nome.toLowerCase(),searchWord.toLowerCase())
+			});
 
-		setDisplay(newFilter)
+			setDisplay(newFilter)
+		}
 	}
 
 	const visibleBox = {
